@@ -1,0 +1,57 @@
+/* This File is reserved for global styling */
+
+
+/* *******************************************  GENERIC   ********************************************  */
+:root {
+  --primary: #141414;
+  --secondary: #cecece;
+  --tertiary: #78c0ff;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary) !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--secondary);
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+/* *******************************************  MOBILE   ********************************************  */
+@media only screen and (max-width: 600px) {
+  body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/* *******************************************  TABLET   ********************************************  */
+@media only screen and (min-width: 601px) {
+  body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+/* *******************************************  DESKTOP (Std.)   ********************************************  */
+@media only screen and (min-width: 1024px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+/* *******************************************  DESKTOP (4K)   ********************************************  */
+@media only screen and (min-width: 1998px) {
+  body {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
