@@ -3,19 +3,24 @@
 
 /* *******************************************  GENERIC   ********************************************  */
 :root {
-  --primary: #141414;
-  --secondary: #cecece;
-  --tertiary: #78c0ff;
+  --primaryColor: #141414;
+  --secondaryColor: #cecece;
+  --tertiaryColor: #78c0ff;
+
+  --horMarginMob: 1rem;
 }
 
 body {
-  background-color: var(--primary);
-  color: var(--secondary) !important;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor) !important;
+  display: grid;
+
+  /* font-family: Agency; */
 }
 
 a {
   text-decoration: none !important;
-  color: var(--secondary);
+  color: var(--secondaryColor);
 }
 
 ul, li {
@@ -29,8 +34,7 @@ ul, li {
 /* *******************************************  MOBILE   ********************************************  */
 @media only screen and (max-width: 600px) {
   body {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 var(--horMarginMob);
   }
 }
 /* *******************************************  TABLET   ********************************************  */

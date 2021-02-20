@@ -14,8 +14,8 @@
        <p>Existing websites that I have recreated and then remastered using existing branding from the company</p>
        <div> {/**Project Card */}
         <h4>Freecycle</h4>
-        <togglenbtn></togglenbtn>
-        <divider></divider> 
+        <button>Remaster Toggle Button</button>
+        <div>Divider</div> 
         <div> {/* Project Preview section */}
           <div> {/* Responsive device icons */}
             <img alt="Preview project in desktop (4K) screen layout"/>
@@ -29,7 +29,7 @@
             <h5>Description</h5>
             <p>Description Text</p>
             <h5>Improvements Made</h5>
-            <span>Please see <Link>LINK TEXT</Link> for more information</span>
+            <span>Please see <Link to="#">LINK TEXT</Link> for more information</span>
             <ul>
               <li>Improvements text</li>
             </ul>
