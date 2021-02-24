@@ -15,7 +15,6 @@ body {
   color: var(--secondaryColor) !important;
   display: grid;
 
-  /* font-family: Agency; */
 }
 
 a {
@@ -29,7 +28,10 @@ ul, li {
   margin: 0px;
 }
 
-
+.app {
+  display: flex !important;
+  flex-direction: column;
+}
 
 /* *******************************************  MOBILE   ********************************************  */
 @media only screen and (max-width: 600px) {

@@ -6,11 +6,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import SocialMedia from './SocialMedia'
+
 import { useBreakpoint } from '../contexts/MediaBreakpointCxt'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 
 function Navbar() {
@@ -41,10 +42,8 @@ function Navbar() {
         <li><Link to="#">About</Link></li>
         <li><Link to="#">Contact</Link></li>
       </ul>
-      <div className="mob-visible soc-med-nav">
-        <a href="https://www.linkedin.com/in/thomas-hayton-33742b101/"><FontAwesomeIcon icon={faLinkedin} cursor="pointer" size="2x"/></a>
-        <a href="https://github.com/TGH37/portfolio-website"><FontAwesomeIcon icon={faGithub} cursor="pointer" size="2x"/></a>
-      </div>
+      <SocialMedia />
+
     </nav>
   )
 }
