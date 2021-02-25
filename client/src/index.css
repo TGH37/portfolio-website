@@ -13,7 +13,6 @@
 body {
   background-color: var(--primaryColor);
   color: var(--secondaryColor) !important;
-  display: grid;
 
 }
 
@@ -52,6 +51,7 @@ ul, li {
   body {
     margin-left: 2rem;
     margin-right: 2rem;
+    width: calc(100% - 12.91%)
   }
 }
 /* *******************************************  DESKTOP (4K)   ********************************************  */
