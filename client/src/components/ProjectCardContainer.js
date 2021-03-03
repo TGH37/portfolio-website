@@ -13,8 +13,8 @@ function ProjectCardContainer() {
   const [activeProjectPreview, setActiveProjectPreview] = useState(0);
   const [activeProject, setActiveProject] = useState(0);
   return (
-    <div className="body-align">
-      <div className="project-cards-container">
+    // <div className="body-align">
+      <div className="project-cards-container body-align">
         <ProjectCard 
           title="Freecycle Remaster"
           imgSrc = {FreecycleRemaster}
@@ -41,7 +41,7 @@ function ProjectCardContainer() {
           imgSrc = {FreecycleRemaster}
         /> */}
       </div>
-    </div>
+    // </div>
   )
 }
 

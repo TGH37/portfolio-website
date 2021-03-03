@@ -7,16 +7,16 @@
   --secondaryColor: #cecece;
   --tertiaryColor: #78c0ff;
 
-  --horMarginMob: 1rem;
 }
 
 body {
+  --horMarginMob: 1rem;
   background-color: var(--primaryColor);
   color: var(--secondaryColor) !important;
-  margin: auto;
+  
   margin: 0 var(--horMarginMob);
-  /* width: min-content;
-  max-width: calc(100vw - var(--horMarginMob)); */
+  width: calc(100% - 2* var(--horMarginMob));
+  
 } 
 
 a {
@@ -38,6 +38,7 @@ ul, li {
 /* *******************************************  MOBILE   ********************************************  */
 @media only screen and (max-width: 600px) {
   body {
+    
   }
 }
 /* *******************************************  TABLET   ********************************************  */
@@ -51,15 +52,22 @@ ul, li {
 /* *******************************************  DESKTOP (Std.)   ********************************************  */
 @media only screen and (min-width: 1024px) {
   body {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    width: calc(100% - 12.91%)
+    --margin-sides: 2rem;
+    
+    margin-left: var(--margin-sides);
+    margin-right: var(--margin-sides);
+    
+    width: calc(100% - 12.91% - 2 * var(--margin-sides));
   }
 }
 /* *******************************************  DESKTOP (4K)   ********************************************  */
 @media only screen and (min-width: 1998px) {
   body {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    --margin-sides: 3rem;
+
+    margin-left: var(--margin-sides);
+    margin-right: var(--margin-sides);
+    
+    width: calc(100% - 12.91% - 2 * var(--margin-sides));
   }
 }

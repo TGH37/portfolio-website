@@ -17,12 +17,9 @@ import SelectedProject from './SelectedProject'
 
   return (
     <section id="portfolio-section">
-      <h1>Projects I've Worked on</h1>
+      <h1 className="selected-project__title">Projects I've Worked on</h1>
       <ProjectCardContainer />
-
       <SelectedProject />
-
-
     </section>
   )
 }
