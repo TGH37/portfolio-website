@@ -3,52 +3,25 @@
  * Description: Container for the portfolio section of the site
  */
 
- import React from 'react'
- import { Link } from 'react-router-dom'
+ import React, { useState } from 'react'
+
+
+ import ProjectCard from './ProjectCard'
+ import ProjectCardContainer from './ProjectCardContainer'
+import SelectedProject from './SelectedProject'
+
+
 
  function PortfolioSection() {
-   return (
-     <section>
-       <h1>Projects I've Worked on</h1>
-       <h3>Remasters</h3>
-       <p>Existing websites that I have recreated and then remastered using existing branding from the company</p>
-       <div> {/**Project Card */}
-        <h4>Freecycle</h4>
-        <button>Remaster Toggle Button</button>
-        <div>Divider</div> 
-        <div> {/* Project Preview section */}
-          <div> {/* Responsive device icons */}
-            <img alt="Preview project in desktop (4K) screen layout"/>
-            <img alt="Preview project in desktop (standard) screen layout"/>
-            <img alt="Preview project in tablet screen layout"/>
-            <img alt="Preview project in mobile phone screen layout"/>
-          </div>
-          <img alt="Project preview shown in selected screen layout"/>
-        </div>
-          <div> {/*Text section*/}
-            <h5>Description</h5>
-            <p>Description Text</p>
-            <h5>Improvements Made</h5>
-            <span>Please see <Link to="#">LINK TEXT</Link> for more information</span>
-            <ul>
-              <li>Improvements text</li>
-            </ul>
-            <div> {/**Technologies used */}
-              <h5>Technologies Used</h5>
-              <div> {/**Technology used logo's */}
-                <img alt="React.js"/>
-              </div>
-            </div>
-            <div> {/**Link Buttons */}
-              <button>View Site</button>
-              <button>View Code</button>
-              <button>View Mockups</button>
-              <button>View Docs</button>
-            </div>
-          </div>
-       </div>
-     </section>
-   )
- }
+  
+
+  return (
+    <section id="portfolio-section">
+      <h1 className="selected-project__title">Projects I've Worked on</h1>
+      <ProjectCardContainer />
+      <SelectedProject />
+    </section>
+  )
+}
  
  export default PortfolioSection

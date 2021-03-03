@@ -25,7 +25,211 @@
     bottom: 0px;
     left: 0px;
   }
+
+
+  #portfolio-section {
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    /* grid-template: auto / auto; */
+    /* justify-items: center; */
+    text-align: center;
+    width: 100%;
+  }
+
+  .selected-project__title {
+    --border-width: 2px;
+
+
+    position: relative;
+    border-top: var(--border-width) solid var(--secondaryColor);
+    border-bottom: var(--border-width) solid var(--secondaryColor);
+    padding: 2rem 0;
+
+    text-align: center;
+  }
+
+
+  /* .selected-project__title::before {
+    display: block;
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: calc(2rem + 3px);
+    background-color: var(--secondaryColor);
+  }
+  .selected-project__title::after {
+    display: block;
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    top: 2rem;
+    background-color: var(--secondaryColor);
+  } */
+
+  /* #selected-project-container {
+    position: relative;
+  }
+  .divider {
+    width: 100%;
+    height: 2px;
+    border: 1px solid var(--secondaryColor);
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 20px;
+  } */
+
+  .project-cards-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / auto;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    min-height: 50vh;
+    color: var(--primaryColor);
+    justify-items: center;
+    width: 100%;
+  }
   
+  .project-card {
+    background-color: var(--secondaryColor);
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+    
+
+    border-radius: 0.1em;
+    font-size: 0.5rem;
+  }
+
+  .project-card:hover{
+    background-color: var(--tertiaryColor);
+    cursor: pointer;
+  }
+  
+  .project-card > img {
+    width: 100%;
+    /* height: 50% !important; */
+    height: 75%;
+    
+    border-radius: 0.1em;
+
+  }
+
+  #project-device-preview-container {
+    height: min-content;
+    grid-column: 1 / 2;
+  }
+
+  #toggle-btn-container {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: left;
+    
+    /* position: relative;
+    height: 30px; */
+  }
+  #selected-project-container {
+    width: 100%;
+  }
+  .remaster-toggle-btn {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    /* position: absolute;
+    text-align: left;
+    left: 0; */
+
+    font-size: calc(1rem + 2vw);
+  }
+
+  #device-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .device-icon {
+    color: #cecece;
+    font-size: 2rem;
+  }
+
+  .device-icon:hover {
+    cursor: pointer;
+  }
+
+  #project-preview-image-container {
+    display:grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    padding: 1rem 0;
+  }
+
+  .project-preview-image {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 50vw;
+  }
+  
+
+  #project-details-text-container  a {
+    color: var(--tertiaryColor);
+  }
+
+  .selected-project__header {
+  /* text-decoration: underline; */
+  font-weight: bold;
+  font-size: 1.25rem;
+  }
+
+  .tech-logo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    margin-bottom: 1rem
+  }
+  .tech-logo-container > img{
+    max-width: 20vh;
+    max-height: 50px;
+  }
+
+  #project-cta-btn-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5vh;
+  }
+  #project-cta-btn-container > a{
+    width: 100%;
+  }
+  
+  .project-cta-btn {
+    width: 100%;
+    height: 5vh;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primaryColor);
+    background-color: var(--tertiaryColor);
+
+    border-radius: 0.3rem;
+    padding: 0;
+  }
+
+  /* *******************************************  SMALL MOBILE   ********************************************  */
+  @media only screen and (max-width: 480px) {
+    .tech-logo-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
   /* *******************************************  MOBILE   ********************************************  */
   @media only screen and (max-width: 1023px) {
     nav {
@@ -122,15 +326,20 @@
     header > #title-profession-engineer {
       grid-area: sub2;
     }
-}
-/* *******************************************  TABLET   ********************************************  */
-@media only screen and (min-width: 601px) {
-  nav > .soc-med-nav {
-    grid-column: 1 / 2;
-  }
-  body {
 
   }
+  /* *******************************************  TABLET   ********************************************  */
+  @media only screen and (min-width: 601px) {
+    nav > .soc-med-nav {
+      grid-column: 1 / 2;
+    }
+    body {
+      
+    }
+    .project-cards-container {
+      grid-template: auto / repeat(3, 1fr);
+    }
+    
 }
 
 /* *******************************************  DESKTOP (Std.)   ********************************************  */
@@ -176,6 +385,11 @@
     color: var(--tertiaryColor) !important;
   }
   
+
+  #header-container {
+    margin: 0 !important;
+  }
+
   header {
     display: grid;
     width: calc(100% - 12.91%);
@@ -200,12 +414,6 @@
     vertical-align: middle;
   }
   
-  header > #title-name {
-    position: absolute;
-    grid-area: name;
-    
-  }
-
   header > #title-soc-med {
     grid-area: soc-med;
   }
@@ -214,16 +422,144 @@
     font-size: calc(3rem + 2vh);
 
   }
+
+  #title-name:hover {
+    cursor: default
+  }
+
+  #title-profession-full-stack:hover, #title-profession-engineer:hover, #title-soc-med>div>a:hover {
+    cursor: pointer;
+    color: var(--tertiaryColor);
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+  }
+  
+  header > #title-name {
+    position: absolute;
+    grid-area: name;
+  }
+
   header > #title-profession-full-stack {
     position: absolute;
     grid-area: sub1;
     font-size: calc(1rem + 2vh);
   }
+
   header > #title-profession-engineer {
     position: absolute;
     grid-area: sub2;
     font-size: calc(1rem + 2vh);
   }
+
+  .body-align {
+    /* grid-template-columns: 35% 60%; */
+
+  }
+ 
+
+  .project-cards-container {
+    grid-column: 1 / 3
+  }
+
+  .project-card {
+    min-height: 40vh;
+  }
+  .project-card > img {
+    /* height: 60%; */
+  }
+
+  #selected-project-container {
+    display: grid;
+    grid-template-columns: 35% auto;
+    column-gap: 2rem;
+  }
+
+  .selected-project__title {
+    grid-column: 1 / 3;
+  }
+
+  
+  #toggle-btn-container {
+    
+    grid-column: 1 / 2;
+    justify-self: left;
+  }
+  
+  .remaster-toggle-btn {
+    
+  }
+  #project-device-preview-container {
+    height: min-content;
+  }
+  #device-icon-container {
+    grid-column: 1 / 2;
+  }
+
+  .device-icon {
+  }
+
+  #project-preview-image-container {
+    justify-items: center;
+    padding: 1rem 0;
+  }
+
+  .project-preview-image {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100%;
+  }
+  
+  #project-details-text-container {
+    grid-column: 2 / 3;
+    grid-row: 3/4;
+    text-align: left;
+    word-wrap: break-word;
+    width: 100%;
+  }
+
+  #tech-used-container {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+
+  #tech-used-container > .selected-project__header {
+    text-align: center;
+    padding-left: 2rem;
+
+  }
+
+  .tech-logo-container > img{
+    max-height: 100px;
+  }
+
+  .tech-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2rem
+  }
+
+  #project-cta-btn-container {
+    grid-column: 1 / 3;
+    flex-direction: row;
+    column-gap: 0.5vw;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  #project-cta-btn-container > a{
+    width: 15%
+  }
+  
+  .project-cta-btn {
+    border-radius: 1rem;
+    height: 2rem;
+    box-shadow: none;
+  }
+  .project-cta-btn:hover {
+    cursor: pointer;
+  }
+
 
 }
 /* *******************************************  DESKTOP (4K)   ********************************************  */
