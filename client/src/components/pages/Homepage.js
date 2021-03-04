@@ -20,7 +20,11 @@ function Homepage() {
       <PortfolioSection />
       <section>
         <h1 className="selected-project__title">My Skills</h1>
+      </section>
+      <section>
         <h1 className="selected-project__title">About Me</h1>
+      </section>
+      <section>
         <h1 className="selected-project__title">Contact Me</h1>
       </section>
 
