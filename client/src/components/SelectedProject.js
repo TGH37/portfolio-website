@@ -13,7 +13,7 @@
 import TechnologyList from './TechnologyList'
 import ProjectDevicePreview from './ProjectDevicePreview'
  
- function SelectedProject() {
+ function SelectedProject({ projectData }) {
   const [selectedProject, setSelectedProject] = useState("freecycle")
   
    return (
@@ -37,8 +37,8 @@ import ProjectDevicePreview from './ProjectDevicePreview'
           <TechnologyList/>
         </div>
         <div id="project-cta-btn-container">
-          <Link to="#"><button className="project-cta-btn">View Site</button></Link>
-          <Link to="#"><button className="project-cta-btn">View Code</button></Link>
+          <a href={projectData.ipAddressTracker.links.site} target="_blank"><button className="project-cta-btn">View Site</button></a>
+          <a href={projectData.ipAddressTracker.links.code} target="_blank"><button className="project-cta-btn">View Code</button></a>
           <Link to="#"><button className="project-cta-btn">View Mockups</button></Link>
           <Link to="#"><button className="project-cta-btn">View Docs</button></Link>
         </div>

@@ -12,14 +12,14 @@ import SelectedProject from './SelectedProject'
 
 
 
- function PortfolioSection() {
+ function PortfolioSection({ projectData }) {
   
 
   return (
     <section id="portfolio-section">
       <h1 className="selected-project__title">Projects I've Worked on</h1>
       <ProjectCardContainer />
-      <SelectedProject />
+      <SelectedProject projectData={projectData}/>
     </section>
   )
 }

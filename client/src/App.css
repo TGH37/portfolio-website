@@ -223,6 +223,17 @@
     padding: 0;
   }
 
+  .skills-section {
+    text-align: center;  
+  }
+
+  .skills-category {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
   /* *******************************************  SMALL MOBILE   ********************************************  */
   @media only screen and (max-width: 480px) {
     .tech-logo-container {
