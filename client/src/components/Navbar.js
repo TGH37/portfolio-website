@@ -3,7 +3,7 @@
  * Description: Responsive navbar (vertical in desktop mode, horizontal & hidden in Mob mode)
  */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import SocialMedia from './SocialMedia'
@@ -12,40 +12,42 @@ import { useBreakpoint } from '../contexts/MediaBreakpointCxt'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import styles from '../styles/css/layout.module.css'
 
 
 function Navbar() {
-  const [menuVisible, setMenuVisible] = useState(false)
-
+  const [menuVisible, setMenuVisible] = useState(false);
   const mediaBreakpoints = useBreakpoint();
 
-  const menuIconRespStyle = () => mediaBreakpoints.xs || mediaBreakpoints.md ? {visibility: "visible"} : {visibility: "hidden"}
+  const getNavDynAttributes = () => {
+    const dynamicAttrs = {
+      'aria-expanded': menuVisible,
+      className: menuVisible ? `${styles.showMenu}` : `${styles.hideMenu}`,
+    };
+    const staticClassNames = `${styles.Navbar}`;
+    return {
+      ...dynamicAttrs,
+      className: staticClassNames + " " + dynamicAttrs.className
+    };
+  };
 
-  const NavbarListRespStyle = () => {
-    let returnStyle = {}
-    if(mediaBreakpoints.lg || mediaBreakpoints.xl) {
-      // setMenuVisible(true)
-      returnStyle = {...returnStyle, visibility: "visible"};
-    } else {
-      returnStyle = {...returnStyle, visibility: menuVisible ? "visible" : "hidden"};
-    }
-
-    return returnStyle;
-  }
+  useEffect(() => {
+    setMenuVisible(true);
+  }, [mediaBreakpoints.md]);
 
   return (
-    <nav>
-      <FontAwesomeIcon className="menu-icon" icon={faBars} size="2x" onClick={()=> setMenuVisible(!menuVisible)} style={menuIconRespStyle()}/>
-      <ul style={NavbarListRespStyle()}>
+    <nav {...getNavDynAttributes()}>
+      <FontAwesomeIcon className={`${styles.hideDownToTablet} ${styles.menuIcon}`} icon={faBars} size="2x" onClick={()=> setMenuVisible(!menuVisible)}/>
+      <ul>
         <li><Link to="#">Portfolio</Link></li>
         <li><Link to="#">Skills</Link></li>
         <li><Link to="#">About</Link></li>
         <li><Link to="#">Contact</Link></li>
       </ul>
-      <SocialMedia />
+      <SocialMedia forwardClassName={`${styles.alignBase}`}/>
 
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

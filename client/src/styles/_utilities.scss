@@ -1,0 +1,44 @@
+.hideMenu {
+    // border: none !important ;
+    & > ul {
+        transform: scaleY(0);
+      height: 0 !important;
+    }
+}
+
+
+.showMenu {
+    transform: scaleY(1);
+    height: auto;
+}
+
+// Dynamic Visibility
+.hideOnTablet {
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+  
+  .hideDownToTablet {
+    @media (min-width: $breakpoint-desktop) {
+      /*
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      */
+      display: none;
+    }
+  }
+  
+  .hideUpToTablet {
+    display: none;
+    @media (min-width: $breakpoint-tablet) {
+      display: initial;
+    }
+  }
+  .hideUpToDesktop {
+    display: none;
+    @media (min-width: $breakpoint-desktop) {
+      display: initial;
+    }
+  }

@@ -3,21 +3,26 @@
  * Desc: Composition based, reusable social media icons
  */
 
- import React from 'react'
+ import React from 'react';
+ import styles from '../styles/css/misc.module.css';
 
- import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
- import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
  
  function SocialMedia(props) {
+   const links = {
+     linkedIn: "https://www.linkedin.com/in/thomas-hayton-33742b101/",
+     github: "https://github.com/TGH37/portfolio-website",
+   };
 
   return (
-    <div className="mob-visible soc-med-nav" style={props.style}>
-      <a href="https://www.linkedin.com/in/thomas-hayton-33742b101/"><FontAwesomeIcon icon={faLinkedin} cursor="pointer" size="1x"/></a>
+    <div className={`${styles.socMedNav} mob-visible ${props.forwardClassName}`} style={props.style}>
+      <a href={links.linkedIn}><FontAwesomeIcon icon={faLinkedin} cursor="pointer" size="1x"/></a>
       {props.dividers}
-      <a href="https://github.com/TGH37/portfolio-website"><FontAwesomeIcon icon={faGithub} cursor="pointer" size="1x"/></a>
-  </div>
-   )
- }
+      <a href={links.github}><FontAwesomeIcon icon={faGithub} cursor="pointer" size="1x"/></a>
+    </div>
+   );
+ };
  
- export default SocialMedia
+ export default SocialMedia;
  
