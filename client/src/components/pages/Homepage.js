@@ -7,7 +7,7 @@ import React from 'react'
 
 import projectData from "../../db/projectData.json";
 import Navbar from '../Navbar';
-import HomeTitle from "../HomeTitle.js";
+import Hero from "../Hero";
 import PortfolioSection from '../PortfolioSection';
 import SkillsSection from '../SkillsSection';
 
@@ -16,9 +16,9 @@ function Homepage() {
     <>
       <Navbar />
 
-      <header id="header-container">
-        <HomeTitle />
-      </header>
+      {/* <header id="header-container"> */}
+        <Hero />
+      {/* </header> */}
 
       <PortfolioSection projectData={projectData}/>
         <h1 className="selected-project__title">My Skills</h1>
