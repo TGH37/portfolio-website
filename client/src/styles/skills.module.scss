@@ -1,0 +1,11 @@
+@import 'config';
+@import 'utilities';
+
+.skillsContainer {
+    text-align: center;  
+}
+
+.skillsCategory {
+    display: flex;
+    flex-direction: column;
+}

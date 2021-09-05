@@ -2,12 +2,13 @@
  * 
  */
 
- import React from 'react'
+ import React from 'react';
+ import styles from '../styles/css/skills.module.css';
 
  function SkillsSection() {
     return(
-        <section className='skills-section'>
-            <div className='skill-category'>
+        <section className={styles.skillsContainer}>
+            <div className={styles.skillsCatergory}>
                 <h2 className='skills-list__section-title'>Web Development</h2>
                 <div className='skills-list'>
                     <h3 className='skills-list__list-title'>Languages / Frameworks</h3>
@@ -31,7 +32,7 @@
                 </div>
             </div>
 
-            <div className='skill-category'>
+            <div className={styles.skillsCatergory}>
                 <h2 className='skills-list__section-title'>Additional Technical Skills</h2>
                 <div className='skills-list'>
                     <h3 className='skills-list__list-title'>Languages / Frameworks</h3>
@@ -59,7 +60,7 @@
                 </div>
             </div>
 
-            <div className='skill-category'>
+            <div className={styles.skillsCatergory}>
                 <div className='skills-list'>
                     <h2 className='skills-list__section-title'>Engineering Softare</h2>
                     <ul className='skills-list__list'>

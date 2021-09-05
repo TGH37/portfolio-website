@@ -2,9 +2,10 @@
  * 
  */
 
- import React, { useState, useEffect } from 'react'
+ import React, { useState, useEffect, CSSProperties } from 'react'
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  import { faToggleOn, faLaptop, faDesktop, faMobileAlt, faTabletAlt} from '@fortawesome/free-solid-svg-icons'
+ import styles from '../styles/css/portfolio.module.css'
  
  //Pictures
   import FreecycleNominal4k from '../assets/logos/AdobeXD_logo.png' /**Test to see if device selection works, to be replaced with actual picture once ready*/
@@ -17,8 +18,15 @@
   // import FreecycleRemasterTablet from '../assets/'
   // import FreecycleRemasterMobile from '../assets/'
 
-  function ProjectDevicePreview({ project }) {
-   
+  import { projectData } from '../interfaces'
+import DeviceIcons from './DeviceIcons'
+
+  interface Props {
+    projectData: projectData
+  }
+
+  function ProjectDevicePreview(props: Props) {
+   const { projectData } = props
     //TODO (Tomh): Create and import data-structure for project information to make it versatile to add other projects. 
     const projectDetails = {
       title: "freecycle",
@@ -44,28 +52,6 @@
         nominal: projectDetails.imagesNominal.imageDesktop,
         remastered: projectDetails.imagesRemastered.imageDesktop
     });
-
-
-    const toggleStyle = (isToggleActive) => {
-      switch(isToggleActive) {
-        case false:
-          return {
-            color: "#cecece", //TODO (Tomh): relpace hard coded colours with theme colours using context
-            transform: "rotate(180deg)",
-            cursor: "pointer",
-            visibility: projectDetails.isRemasteredProject && !toggleState ? "visible" : "hidden",
-          }
-          case true:
-            return {
-              color: "#78c0ff",
-              cursor: "pointer",
-              visibility: projectDetails.isRemasteredProject && toggleState ? "visible" : "hidden",
-          }
-      }
-
-    }
-
-    const deviceStyle = (inDevice) => selectedDevice === inDevice ? {color: "var(--tertiaryColor)"} : {}
 
     useEffect(() => {
       setPreviewImages(() => {
@@ -111,19 +97,11 @@
     }
     
     return (
-      <div id="project-device-preview-container">
-        <div id="toggle-btn-container" style={toggleStyle("container")}>
-          <span style={projectDetails.isRemasteredProject ? {} : {visibility:"hidden"}}>{toggleState ? "Remastered" : "Original"}</span>
-          <FontAwesomeIcon icon={faToggleOn} className="remaster-toggle-btn" onClick={()=> setToggleState(!toggleState)} style={toggleStyle(toggleState)}/>
-        </div>
-        <div id="device-icon-container">
-          <FontAwesomeIcon icon={faDesktop}   className="device-icon" deviceHandle="4k"      style={deviceStyle("4k")}      onClick={() => setSelectedDevice("4k")}      title="Preview project in desktop (4K) screen layout" />
-          <FontAwesomeIcon icon={faLaptop}    className="device-icon" deviceHandle="desktop" style={deviceStyle("desktop")} onClick={() => setSelectedDevice("desktop")} title="Preview project in desktop (standard) screen layout" />
-          <FontAwesomeIcon icon={faTabletAlt} className="device-icon" deviceHandle="tablet"  style={deviceStyle("tablet")}  onClick={() => setSelectedDevice("tablet")}  title="Preview project in tablet screen layout" />
-          <FontAwesomeIcon icon={faMobileAlt} className="device-icon" deviceHandle="mobile"  style={deviceStyle("mobile")}  onClick={() => setSelectedDevice("mobile")}  title="Preview project in mobile phone screen layout" />
-        </div>
-        <div id="project-preview-image-container">
-          <img alt={`Preview of the ${project.get} project, shown in ${selectedDevice} screen layout`} src={determineDeviceImage()} className="project-preview-image"/>
+      <div className={styles.projectPreviewContainer}>
+
+        <DeviceIcons />
+        <div className={styles.projectPreviewImgContainer}>
+          <img alt={`Preview of the ${projectData.title} project, shown in ${selectedDevice} device layout`} src={determineDeviceImage()} />
         </div>
       </div>
    )
