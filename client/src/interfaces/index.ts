@@ -35,6 +35,7 @@ export interface projectData {
     accessor: string
     title: string
     imgs?: any[]
+    thumbnailImgs?: {}
     deviceImgs: Array<{accessor: deviceIcon, src: any}>
     cardContent: JSX.Element
     technologies: technologies[],

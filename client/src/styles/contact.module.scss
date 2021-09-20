@@ -1,0 +1,105 @@
+@import 'config';
+@import 'utilities';
+
+.contactForm {
+    display: grid;
+    min-width: 100%;
+    // grid-template-rows: repeat(7, 1fr);
+    row-gap: 1rem;
+    // grid-template-columns: auto;
+    & > div {
+      grid-column: 1/2;
+    }
+    
+    @media (min-width: $breakpoint-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 2rem;
+      & > div {
+        grid-column: auto;
+      }
+  
+    }
+    
+    & label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    & input {
+        min-width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        padding-left: 1rem;
+        border: none;
+        border-bottom: 1px solid $color-primary;
+        color: lighten($color-primary, 20%);
+        background-color: $color-background;
+        font-weight: bold;
+        font-size: 1.5rem;
+        &:active, &:focus, &:focus-visible {
+            border-bottom: 2px solid $color-secondary;
+            outline: none;
+        }
+        &::placeholder {
+            color: $color-primary;
+            font-weight: normal;
+            font-size: 0.8rem;
+        }
+    }
+    
+    
+    & textarea {
+        grid-column: 1/4;
+        padding: 0.25rem;
+        background-color: $color-primary;
+        border: 2px solid black;
+        border-radius: 5px;
+        @media (min-width: $breakpoint-desktop) {
+            grid-column: 1/4;
+        }
+        &:active, &:focus, &:focus-visible {
+            border: 3px solid $color-secondary;
+            outline: none;
+        }
+        &::placeholder {
+            color: darken($color-primary, 30%);
+            font-weight: normal;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.requiredFormField::before {
+content:"* ";
+color: $color-primary;
+}
+
+.formSubmitBtn {
+    background-color: $color-primary;
+
+    @media (min-width: $breakpoint-desktop ) {
+        grid-column: 2 / 3;
+        min-height: 2rem;
+        // max-width: 100px;
+        border-radius: 7px;
+        justify-self: center;
+        padding: 0.75rem 2.5rem;
+        font-weight: bold;
+        font-size: 1.25rem;
+        transition: background-color 0.5s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color-secondary, 15%);
+        }
+        &:active, &:focus, &:focus-visible {
+            border: 3px solid $color-secondary;
+            outline: none;
+        }
+    };
+}
+
+.contactLine {
+    color: $color-primary;
+}

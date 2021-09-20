@@ -1,0 +1,156 @@
+.hideMenu > ul {
+  transform: scaleY(0);
+  height: 0 !important;
+}
+
+.showMenu {
+  transform: scaleY(1);
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hideDownToTablet {
+    /*
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      */
+    display: none;
+  }
+}
+
+.hideUpToTablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hideUpToTablet {
+    display: initial;
+  }
+}
+
+.hideUpToDesktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hideUpToDesktop {
+    display: initial;
+  }
+}
+
+.contactForm {
+  display: grid;
+  min-width: 100%;
+  row-gap: 1rem;
+}
+
+.contactForm > div {
+  grid-column: 1/2;
+}
+
+@media (min-width: 1024px) {
+  .contactForm {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+  .contactForm > div {
+    grid-column: auto;
+  }
+}
+
+.contactForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contactForm input {
+  min-width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  border: none;
+  border-bottom: 1px solid #cecece;
+  color: white;
+  background-color: #141414;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.contactForm input:active, .contactForm input:focus, .contactForm input:focus-visible {
+  border-bottom: 2px solid #78c0ff;
+  outline: none;
+}
+
+.contactForm input::placeholder {
+  color: #cecece;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.contactForm textarea {
+  grid-column: 1/4;
+  padding: 0.25rem;
+  background-color: #cecece;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+@media (min-width: 1024px) {
+  .contactForm textarea {
+    grid-column: 1/4;
+  }
+}
+
+.contactForm textarea:active, .contactForm textarea:focus, .contactForm textarea:focus-visible {
+  border: 3px solid #78c0ff;
+  outline: none;
+}
+
+.contactForm textarea::placeholder {
+  color: #828282;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+.requiredFormField::before {
+  content: "* ";
+  color: #cecece;
+}
+
+.formSubmitBtn {
+  background-color: #cecece;
+}
+
+@media (min-width: 1024px) {
+  .formSubmitBtn {
+    grid-column: 2 / 3;
+    min-height: 2rem;
+    border-radius: 7px;
+    justify-self: center;
+    padding: 0.75rem 2.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .formSubmitBtn:hover {
+    cursor: pointer;
+    background-color: #c5e4ff;
+  }
+  .formSubmitBtn:active, .formSubmitBtn:focus, .formSubmitBtn:focus-visible {
+    border: 3px solid #78c0ff;
+    outline: none;
+  }
+}
+
+.contactLine {
+  color: #cecece;
+}

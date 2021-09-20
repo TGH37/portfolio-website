@@ -20,10 +20,11 @@ function ProjectCardContainer() {
       <div className={styles.projectCardsContainer}>
         {
           ProjectData.map((projectObj) => {
-            const {title, imgs, cardContent} = projectObj;
+            const {title, imgs, cardContent, thumbnailImgs} = projectObj;
             return <ProjectCard 
               title = {title}
-              imgs = {imgs}
+              imgs = {imgs ? imgs : []}
+              thumbnailImgs = {thumbnailImgs ? thumbnailImgs : {}}
               content = {cardContent}
               updateActiveProject = {updateActiveProject}
             />

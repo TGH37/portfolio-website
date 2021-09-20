@@ -125,3 +125,80 @@
     grid-row: 3 / 4;
   }
 }
+
+.hideMenu > ul {
+  transform: scaleY(0);
+  height: 0 !important;
+}
+
+.showMenu {
+  transform: scaleY(1);
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hideDownToTablet {
+    /*
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      */
+    display: none;
+  }
+}
+
+.hideUpToTablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hideUpToTablet {
+    display: initial;
+  }
+}
+
+.hideUpToDesktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hideUpToDesktop {
+    display: initial;
+  }
+}
+
+.animatedCursor {
+  height: min-content;
+  transform: scaleX(3);
+  stroke: #cecece;
+  fill: #cecece;
+  stroke-width: 2;
+}
+
+.cursorAlt,
+.cursorCircle {
+  stroke: none;
+  fill: #cecece;
+}
+
+.animatedCursor,
+.cursorCircle {
+  position: fixed;
+  position: fixed;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.cursorCircle {
+  fill: #990000;
+}
+
+.foobar {
+  stroke: red;
+}

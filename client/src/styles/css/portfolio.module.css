@@ -93,7 +93,7 @@
 }
 
 .card {
-  background-color: #cecece;
+  background-color: #141414;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,9 +101,8 @@
   font-size: 0.5rem;
 }
 
-.card:hover {
-  background-color: #78c0ff;
-  cursor: pointer;
+.card * {
+  pointer-events: none;
 }
 
 .card > img {

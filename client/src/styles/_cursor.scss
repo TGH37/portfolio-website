@@ -1,0 +1,41 @@
+@import 'config';
+@import 'utilities';
+
+.animatedCursor {
+    height: min-content;
+    // max-height: 150px;
+    // max-width: 150px;
+    // min-height: 500px;
+    // min-width: 500px;
+    transform: scaleX(3);
+    
+    $color-cursor-svg: darken($color-primary, 0%);
+    stroke: $color-cursor-svg;
+    fill: $color-primary;
+    stroke-width: 2;
+}
+
+.cursorAlt,
+.cursorCircle
+{
+    stroke: none;
+    // stroke: lighten($color-secondary, 15%);
+    fill: $color-primary;
+}
+
+
+.animatedCursor,
+.cursorCircle {
+    // transform:translate(50px, 50px);
+    position: fixed;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+    
+
+}
+
+.cursorCircle {
+    fill: darken(red, 20%);
+    // fill: darken($color-secondary, 20%);
+}

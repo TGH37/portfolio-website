@@ -23,7 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.d.ts"
-  ],
+, "src/components/AnimatedCursortsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -22,6 +22,9 @@ import {ReactComponent as XMindLogo} from '../assets/logos/xmind.svg'
 import FreecycleOriginal from '../assets/original.png';
 import IPTrackerThumbnail from '../assets/ip-tracker-thumbnail.png';
 import CROCThumbnail from '../assets/croc-thumbnail.png';
+import CROCThumbnail_Wireframe from '../assets/svg/cro-convergence-wireframe.svg'
+
+
 import ipTrackerDesktop from '../assets/device-images/ip-tracker-desktop.png'
 import ipTrackerTablet from '../assets/device-images/ip-tracker-tablet.png'
 import ipTrackerMobile from '../assets/device-images/ip-tracker-mobile.png'
@@ -52,9 +55,11 @@ export const technologyLogos: Map<technologies, any> = new Map(
 const data: projectData[] = [
   { accessor: "freecycle",
     title: "Freecycle Remaster",
-    imgs: [
-      {src: FreecycleOriginal, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`}, 
-    ],
+   
+    thumbnailImgs: {
+      wireframe: {src: CROCThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for CRO-Convergence`},
+      thumbnail: {src: FreecycleOriginal, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
+    },
     deviceImgs: [
       {accessor: "desktop", src: FreecycleOriginal},
       {accessor: "tablet", src: FreecycleOriginal},
@@ -96,9 +101,10 @@ const data: projectData[] = [
 
   { accessor: "ipTracker",
     title: "IP Address Tracker App",
-    imgs: [
-      {src: IPTrackerThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`}, 
-    ],
+    thumbnailImgs: {
+      wireframe: {src: CROCThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for CRO-Convergence`},
+      thumbnail: {src: IPTrackerThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
+    },
     deviceImgs: [
       {accessor: "desktop", src: ipTrackerDesktop},
       {accessor: "tablet", src: ipTrackerTablet},
@@ -133,9 +139,10 @@ const data: projectData[] = [
   },
   { accessor: "croc",
     title: "CRO Convergence Website Build",
-    imgs: [
-      {src: CROCThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`}, 
-    ],
+    thumbnailImgs: {
+      wireframe: {src: CROCThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for CRO-Convergence`},
+      thumbnail: {src: CROCThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for CRO-Convergence`},
+    },
     deviceImgs: [
       {accessor: "desktop", src: crocDesktop},
       {accessor: "tablet", src: crocTablet},

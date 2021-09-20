@@ -1,8 +1,11 @@
 import './App.css';
 
-import { BreakpointProvider } from './contexts/MediaBreakpointCxt'
+import { BreakpointProvider } from './contexts/MediaBreakpointCxt';
+import CursorProvider from './contexts/CursorCtx';
 
 import Homepage from './components/pages/Homepage.js'
+import './styles/css/global.css'
+
 
 function App() {
   const queries = {
@@ -15,7 +18,9 @@ function App() {
   return (
     <div className="App">
       <BreakpointProvider queries={queries}>
-        <Homepage />
+        <CursorProvider>
+          <Homepage />
+        </CursorProvider>
       </BreakpointProvider>
     </div>
   );

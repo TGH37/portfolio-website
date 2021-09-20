@@ -1,1 +1,54 @@
-/* No CSS */
+.hideMenu > ul {
+  transform: scaleY(0);
+  height: 0 !important;
+}
+
+.showMenu {
+  transform: scaleY(1);
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hideDownToTablet {
+    /*
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      */
+    display: none;
+  }
+}
+
+.hideUpToTablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hideUpToTablet {
+    display: initial;
+  }
+}
+
+.hideUpToDesktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hideUpToDesktop {
+    display: initial;
+  }
+}
+
+body {
+  cursor: none !important;
+}
+
+a:hover {
+  cursor: none;
+}

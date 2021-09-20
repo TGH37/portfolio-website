@@ -1,0 +1,12 @@
+@import 'config';
+@import 'utilities';
+
+body {
+    cursor: none !important;
+}
+
+a {
+    &:hover {
+        cursor: none;
+    }
+}
