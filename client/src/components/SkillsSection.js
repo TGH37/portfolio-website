@@ -4,25 +4,73 @@
 
  import React from 'react';
  import styles from '../styles/css/skills.module.css';
+ import frontEndSVG from '../assets/svg/front-end.svg'
+ import backEndSVG from '../assets/svg/back-end.svg'
+ import databaseSVG from '../assets/svg/database.svg'
+ import easelSVG from '../assets/svg/easel.svg'
 
  function SkillsSection() {
     return(
         <section className={styles.skillsContainer}>
-            <div className={styles.skillsCatergory}>
-                <h2 className='skills-list__section-title'>Web Development</h2>
-                <div className='skills-list'>
-                    <h3 className='skills-list__list-title'>Languages / Frameworks</h3>
+
+            <div className={styles.titleSection}>
+                <h2>Technical Skills</h2>
+                <h2>Soft Skills</h2>
+                <svg className={styles.divider} width={400} height={10}>
+                    <line x1={0} y1={0} x2={400} y2={0} ></line>
+                </svg>
+            </div>
+
+            <div className={styles.skillCardsContainer}>
+                <div style={{}} className={styles.skillCategoryCard}>
+                    <img src={frontEndSVG} className={styles.skillCategoryBgImg}/>
                     <ul className='skills-list__list'>
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>Javascript</li>
+                        <li>SCSS</li>
                         <li>React.js</li>
-                        <li>Node.js</li>
-                        <li>MongoDB</li>
+                        <li>Next.js</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 className='skills-list__list-title'>Software</h3>
+                <div style={{}} className={styles.skillCategoryCard}>
+                    <img src={backEndSVG} className={styles.skillCategoryBgImg}/>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Wordpress CMS</li>
+                    </ul>
+                </div>
+                <div style={{}} className={styles.skillCategoryCard}>
+                    <img src={databaseSVG} className={styles.skillCategoryBgImg}/>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>Webpack</li>
+                        <li>Babel</li>
+                        <li>Typescript</li>
+                        <li>Jest</li>
+                    </ul>
+                </div>
+                <div style={{}} className={styles.skillCategoryCard}>
+                    <img src={easelSVG} className={styles.skillCategoryBgImg}/>
+                    <ul>
+                        <li>AdobeXD</li>
+                        <li>GIMP</li>
+                        <li>XMind</li>
+                        <li>Inkscape</li>
+                    </ul>
+                </div>
+            </div> 
+
+
+
+            {/* <div className={styles.skillsCatergory}>
+                <h2 className='skills-list__section-title'>Web Development</h2>
+                <div className='skills-list'>
+                    <h3 className='skills-list__list-title'>Languages / Frameworks</h3>
+                </div>
+                <div className={styles.designSkillsContainer}>
+                    <h3 className='skills-list__list-title'>Design</h3>
                     <ul className='skills-list__list'>
                         <li>AdobeXD</li>
                         <li>Adobe Photoshop</li>
@@ -72,7 +120,7 @@
                         <li>AutoCAD 2D Modelling Software</li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
         </section>
     )
  }
