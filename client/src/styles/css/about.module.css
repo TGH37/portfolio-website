@@ -1,0 +1,91 @@
+.hideMenu > ul {
+  transform: scaleY(0);
+  height: 0 !important;
+}
+
+.showMenu {
+  transform: scaleY(1);
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hideDownToTablet {
+    /*
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      */
+    display: none;
+  }
+}
+
+.hideUpToTablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hideUpToTablet {
+    display: initial;
+  }
+}
+
+.hideUpToDesktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hideUpToDesktop {
+    display: initial;
+  }
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .aboutContainer {
+    flex-direction: row;
+    text-align: left;
+  }
+  .aboutContainer > p {
+    flex-basis: 50%;
+  }
+}
+
+.imgContainer {
+  position: relative;
+  width: 500px;
+  aspect-ratio: 1024 / 1121;
+}
+
+.imgContainer > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.imgContainer svg {
+  fill: #141414;
+}
+
+.imgContainer svg > * {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .imgContainer {
+    flex-basis: 50%;
+  }
+}

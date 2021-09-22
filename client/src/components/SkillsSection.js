@@ -14,8 +14,8 @@
         <section className={styles.skillsContainer}>
 
             <div className={styles.titleSection}>
-                <h2>Technical Skills</h2>
-                <h2>Soft Skills</h2>
+                <h3>Technical Skills</h3>
+                <h3>Soft Skills</h3>
                 <svg className={styles.divider} width={400} height={10}>
                     <line x1={0} y1={0} x2={400} y2={0} ></line>
                 </svg>

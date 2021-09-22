@@ -4,7 +4,7 @@
  */
 
 import React, {useEffect, useState} from 'react';
-import { useBreakpoint } from '../../contexts/MediaBreakpointCxt';
+import useBreakpoint  from '../../hooks/useBreakpoint';
 
 
 import projectData from "../../db/projectData.json";
@@ -12,6 +12,7 @@ import Navbar from '../Navbar';
 import Hero from "../Hero";
 import PortfolioSection from '../PortfolioSection';
 import SkillsSection from '../SkillsSection';
+import AboutSection from '../AboutSection';
 import Contact from '../Contact';
 import AnimatedCursor from '../AnimatedCursor';
 import CROConvergenceWireframe from '../../assets/svg/cro-convergence-wireframe.svg'
@@ -35,6 +36,7 @@ function Homepage() {
         <SkillsSection />
       <section>
         <h1 className="selected-project__title">About Me</h1>
+        <AboutSection />
       </section>
       <section>
         <h1 className="selected-project__title">Contact Me</h1>

@@ -20,7 +20,7 @@ function AnimatedCursor(props: Props) {
     const el = hoverElement ? hoverElement as HTMLElement : null;
     const boxPosX = hoverElement ? cursorSatelliteCoords.left : clientX;
     const boxPosY = hoverElement ? cursorSatelliteCoords.top : clientY;
-    console.log("x: "+boxPosX+", y: "+ boxPosY + !!hoverElement)
+    // console.log("x: "+boxPosX+", y: "+ boxPosY + !!hoverElement)
     const cursorSatelliteRef = useRef(null);
 
     const {left, top, transform} = useSpring({
@@ -115,7 +115,7 @@ function AnimatedCursor(props: Props) {
         }, [el])
         useEffect(() => {
             if(el === null) return;
-            console.log(hoverElement)
+            // console.log(hoverElement)
         }, [el, cursorSatelliteCoords])
 
         

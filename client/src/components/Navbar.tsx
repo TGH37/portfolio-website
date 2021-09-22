@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 import SocialMedia from './SocialMedia';
 
-import { useBreakpoint } from '../contexts/MediaBreakpointCxt';
+import useBreakpoint from '../hooks/useBreakpoint';
 import useCursorHandlers from '../hooks/useCursorHandlers'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -31,7 +31,7 @@ export type mediaBreakpointStrings = {
 
 function Navbar() {
   const [menuVisible, setMenuVisible] = useState(false);
-  const mediaBreakpoints:mediaBreakpoints = useBreakpoint();
+  const {queryMatch: mediaBreakpoints} = useBreakpoint();
   const cursorHandlers = useCursorHandlers();
 
   const getNavDynAttributes = () => {

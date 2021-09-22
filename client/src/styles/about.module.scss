@@ -1,0 +1,42 @@
+@import 'config';
+@import 'utilities';
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    @media (min-width: $breakpoint-desktop ) {
+        flex-direction: row;
+        text-align: left;
+        & > p {
+            flex-basis: 50%;
+        }
+    };
+        
+}
+
+.imgContainer {
+    position: relative;
+    width: 500px;
+    aspect-ratio: 1024 / 1121;
+    & > * {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    & svg {
+        fill: $color-background;
+        &>* {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: $breakpoint-desktop ) {
+        flex-basis: 50%;
+    };
+}
+

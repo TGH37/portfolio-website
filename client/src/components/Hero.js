@@ -9,13 +9,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import SocialMedia from './SocialMedia'
 
-import { useBreakpoint } from "../contexts/MediaBreakpointCxt"
+import useBreakpoint from "../hooks/useBreakpoint"
 import styles from '../styles/css/hero.module.css';
 
 function HomeTitle() {
 
   const socMedRef = useRef(null);
-  const mediaBreakpoints = useBreakpoint();
+  const {queryMatch: mediaBreakpoints} = useBreakpoint();
   const isMobileMode = mediaBreakpoints.xs || mediaBreakpoints.md ? true : false;
 
   // Initial styling

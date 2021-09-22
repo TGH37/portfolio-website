@@ -1,6 +1,6 @@
 import './App.css';
 
-import { BreakpointProvider } from './contexts/MediaBreakpointCxt';
+import BreakpointProvider from './contexts/MediaBreakpointCtx';
 import CursorProvider from './contexts/CursorCtx';
 
 import Homepage from './components/pages/Homepage.js'

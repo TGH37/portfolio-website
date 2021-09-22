@@ -23,7 +23,7 @@ const useCursorHandlers = (options: Props = {}) => {
     if(!target) return;
     const targetElement = target as HTMLElement;
     setHoverElement(targetElement)
-    console.log("enter")
+    // console.log("enter")
   }, []);
   
   const onMouseLeave = useCallback((event: Event | MouseEvent) => {
@@ -33,7 +33,7 @@ const useCursorHandlers = (options: Props = {}) => {
     }
     toggleCursor();
     setHoverElement(null)
-    console.log("leave")
+    // console.log("leave")
   }, []);
   
   return { onMouseEnter, onMouseLeave };
