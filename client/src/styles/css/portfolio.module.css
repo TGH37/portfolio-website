@@ -99,6 +99,7 @@
   align-items: center;
   border-radius: 0.1em;
   font-size: 0.5rem;
+  color: #cecece;
 }
 
 .card * {
@@ -115,6 +116,10 @@
   .card {
     min-height: 40vh;
   }
+}
+
+.cardThumbnailWireframe {
+  fill: #cecece;
 }
 
 .portfolioContainer {

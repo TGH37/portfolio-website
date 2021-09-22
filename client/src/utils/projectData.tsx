@@ -22,7 +22,9 @@ import {ReactComponent as XMindLogo} from '../assets/logos/xmind.svg'
 import FreecycleOriginal from '../assets/original.png';
 import IPTrackerThumbnail from '../assets/ip-tracker-thumbnail.png';
 import CROCThumbnail from '../assets/croc-thumbnail.png';
+import KetoBlogThumbnail from '../assets/keto-blog-thumbnail.png';
 import CROCThumbnail_Wireframe from '../assets/svg/cro-convergence-wireframe.svg'
+import KetoBlogThumbnail_Wireframe from '../assets/svg/keto-blog-wireframe.svg'
 
 
 import ipTrackerDesktop from '../assets/device-images/ip-tracker-desktop.png'
@@ -99,11 +101,11 @@ const data: projectData[] = [
     ],
   },
 
-  { accessor: "ipTracker",
-    title: "IP Address Tracker App",
+  { accessor: "keto-blog",
+    title: "Lifestyle Blog",
     thumbnailImgs: {
-      wireframe: {src: CROCThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for CRO-Convergence`},
-      thumbnail: {src: IPTrackerThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
+      wireframe: {src: KetoBlogThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
+      thumbnail: {src: KetoBlogThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
     },
     deviceImgs: [
       {accessor: "desktop", src: ipTrackerDesktop},

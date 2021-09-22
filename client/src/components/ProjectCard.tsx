@@ -31,7 +31,7 @@ import useCursorHandlers from '../hooks/useCursorHandlers';
   return (
     <div className={styles.card} onClick={() => updateActiveProject()} {...cursorHandlers}>
     {/* // <div className={styles.card} onClick={() => updateActiveProject()} > */}
-      <img src={thumbnailImgs ? thumbnailImgs.wireframe.src : imgs[activeThumbnailIdx].src} alt={thumbnailImgs ? thumbnailImgs.wireframe.alt : imgs[activeThumbnailIdx].alt}/>
+      <img src={thumbnailImgs ? thumbnailImgs.wireframe.src : imgs[activeThumbnailIdx].src} alt={thumbnailImgs ? thumbnailImgs.wireframe.alt : imgs[activeThumbnailIdx].alt} className={thumbnailImgs ? styles.cardThumbnailWireframe : ""}/>
       <h1>{title}</h1>
       {content}
       <p>learn more...</p>
