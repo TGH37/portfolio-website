@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLaptop, faDesktop, faMobileAlt, faTabletAlt} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptop, faMobileAlt, faTabletAlt} from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/css/portfolio.module.css';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import type { deviceIcon } from '../interfaces';
+import type { Device } from '../interfaces';
 
-interface Props {}
+interface Icon {
+    accessor: Device
+    icon: IconDefinition
+    alt: string
+};
+
+interface Props {
+    selectedDeviceAccessor: Device
+    updateSelectedDevice: Function
+};
 
 function DeviceIcons(props: Props) {
-    const {} = props
+    const {selectedDeviceAccessor, updateSelectedDevice} = props;
 
-    
-    const [activeIconAccessor, setActiveIconAccessor] = useState<deviceIcon>("desktop")
-
-    interface icons {
-        accessor: deviceIcon
-        icon: IconDefinition
-        alt: string
-    }
-
-    const icons: icons[] = [
+    const icons: Icon[] = [
         {
             accessor: "desktop",
             icon: faLaptop,
@@ -35,22 +34,31 @@ function DeviceIcons(props: Props) {
             icon: faMobileAlt,
             alt: "Preview project in mobile device layout"
         },
-    ]
+    ];
 
-    const getDynClass = (accessor: deviceIcon) => accessor === activeIconAccessor ? `${styles.activeIcon}` : ""
+    const getIconAttrs = (accessor: Device) => {
+        return accessor === selectedDeviceAccessor ? 
+        {
+          className: `${styles.deviceIcon} ${styles.activeIcon}`,
+          'aria-active': true,
+        } :
+        {
+          className: styles.deviceIcon,
+          'aria-active': false,
+        };
+      };
     
-
     return (
         <div className={styles.deviceIconContainer}>
             {icons.map((iconObj) => (
                 <FontAwesomeIcon icon={iconObj.icon}
-                className={`${styles.deviceIcon} ${getDynClass(iconObj.accessor)}`}
-                onClick={() => setActiveIconAccessor(iconObj.accessor)}
+                onClick={() => updateSelectedDevice(iconObj.accessor)}
                 title="Preview project in desktop (4K) screen layout"
+                {...getIconAttrs(iconObj.accessor)}
             />
             ))}
         </div>
-    )
-}
+    );
+};
 
-export default DeviceIcons
+export default DeviceIcons;

@@ -1,42 +1,19 @@
-/**
- * Author: Tom Hayton
- * Description: Container for the portfolio section of the site
- */
-
-import React, { useMemo, useState } from 'react';
+import { useContext, } from 'react';
 import styles from '../styles/css/portfolio.module.css';
-
 import ProjectCardContainer from './ProjectCardContainer';
 import SelectedProject from './SelectedProject';
-
-import data, { technologyLogos } from '../utils/projectData';
-import type {projectData, projectNames, technologies} from '../interfaces'
-
+import { GlobalCtx } from '../contexts/GlobalCtx';
 
 function PortfolioSection() {
-  
-  const showcaseProjects: projectNames[] = [
-    "freecycle", 'ipTracker', 'divData'
-  ]
+  const { projectData } = useContext(GlobalCtx);
 
-  const getProjectIdx = (accessor: projectNames): number => {
-    if(!data) return 0;
-    const matchedProjects: projectData[] = data.filter((project: projectData) => project.accessor === accessor);
-    if(!matchedProjects.length) return 0;
-    return data.indexOf(matchedProjects[0]);
-  }
-  const [activeProjectIdx, setActiveProjectIdx] = useState<number>(getProjectIdx("freecycle"));
-  
-  const selectedProject = useMemo(() => data[activeProjectIdx], [activeProjectIdx])
-  
-
-  return (
+  return projectData.length ? (
     <section id="portfolio" className={styles.portfolioContainer}>
       <h1 className={styles.selectedProjectTitle}>Featured Projects</h1>
       <ProjectCardContainer />
-      <SelectedProject projectData={selectedProject}/>
+      <SelectedProject/>
     </section>
-  )
+  ) : <></>;
 };
  
 export default PortfolioSection;
