@@ -199,6 +199,6 @@
   fill: #990000;
 }
 
-.foobar {
-  stroke: red;
+.svgMask {
+  transition: opacity .75s;
 }
