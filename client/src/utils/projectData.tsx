@@ -22,8 +22,10 @@ import {ReactComponent as XMindLogo} from '../assets/logos/xmind.svg'
 //  Pictures
 import FreecycleOriginal from '../assets/original.png';
 import IPTrackerThumbnail from '../assets/ip-tracker-thumbnail.png';
-import CROCThumbnail from '../assets/croc-thumbnail.png';
-import KetoBlogThumbnail from '../assets/keto-blog-thumbnail.png';
+import CROCThumbnail from '../assets/croc-thumbnail_500.png';
+import KetoBlogThumbnail from '../assets/keto-blog-thumbnail_500.png';
+// import CROCThumbnail from '../assets/croc-thumbnail.png';
+// import KetoBlogThumbnail from '../assets/keto-blog-thumbnail.png';
 import CROCThumbnail_Wireframe from '../assets/svg/cro-convergence-wireframe.svg'
 import KetoBlogThumbnail_Wireframe from '../assets/svg/keto-blog-wireframe.svg'
 
@@ -31,9 +33,15 @@ import KetoBlogThumbnail_Wireframe from '../assets/svg/keto-blog-wireframe.svg'
 import ipTrackerDesktop from '../assets/device-images/ip-tracker-desktop.png'
 import ipTrackerTablet from '../assets/device-images/ip-tracker-tablet.png'
 import ipTrackerMobile from '../assets/device-images/ip-tracker-mobile.png'
-import crocDesktop from '../assets/device-images/croc-desktop.png'
-import crocTablet from '../assets/device-images/croc-tablet.png'
-import crocMobile from '../assets/device-images/croc-mobile.png'
+import crocDesktop from '../assets/device-images/croc-desktop_500.png'
+import crocTablet from '../assets/device-images/croc-tablet_200.png'
+import crocMobile from '../assets/device-images/croc-mobile_150.png'
+import blogDesktop from '../assets/device-images/blog-desktop_500.png'
+import blogTablet from '../assets/device-images/blog-tablet_200.png'
+import blogMobile from '../assets/device-images/blog-mobile_150.png'
+// import blogDesktop from '../assets/device-images/blog-desktop.png'
+// import blogTablet from '../assets/device-images/blog-tablet.png'
+// import blogMobile from '../assets/device-images/blog-mobile.png'
 
 export const technologyLogos: Map<technologies, any> = new Map(
   [
@@ -64,9 +72,9 @@ const data: projectData[] = [
       thumbnail: {src: KetoBlogThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
     },
     deviceImgs: [
-      {accessor: "desktop", src: ipTrackerDesktop},
-      {accessor: "tablet", src: ipTrackerTablet},
-      {accessor: "mobile", src: ipTrackerMobile},
+      {accessor: "desktop", src: blogDesktop},
+      {accessor: "tablet", src: blogTablet},
+      {accessor: "mobile", src: blogMobile},
     ],
     cardContent: <p>A blogging website running on a Wordpress CMS and a front-end created with React, connected via the Wordpress REST API. Features a custom bundling solution, unit testing and optimisation.</p>,
     technologies: [
@@ -173,8 +181,9 @@ const data: projectData[] = [
       {accessor: "tablet", src: crocTablet},
       {accessor: "mobile", src: crocMobile},
     ],
-    cardContent: <p>A rebuild of <a href="www.dividenddata.co.uk" target="_blank">www.dividenddata.co.uk</a>, built with MERN stack technologies and Next.js. Features a custom charting library that I built using HTML Canvas API and Object Orientated Programming (OOP) in vanilla Javascript. A static website built with Next.js as a place for prospective customers for a freelancing business I am involved in.</p>,
+    cardContent: <p>A rebuild of <a href="https://www.dividenddata.co.uk" target="_blank">www.dividenddata.co.uk</a>, built with MERN stack technologies and Next.js. Features a custom charting library that I built using HTML Canvas API and Object Orientated Programming (OOP) in vanilla Javascript. A static website built with Next.js as a place for prospective customers for a freelancing business I am involved in.</p>,
     technologies: [
+      "react",
       "next",
       "html",
       "css",
@@ -190,7 +199,7 @@ const data: projectData[] = [
       { title: "Description", 
         content: <>
           <p>
-          This project is to rebuild of the website <a href="www.dividenddata.co.uk" target="_blank">www.dividenddata.co.uk</a>, a popular tool for researching upcoming dividends for companies listed in the UK. It features a front-end created in Next.js, that connects to a MongoDB database, stored with MongoDB Atlas.  
+          This project is to rebuild of the website <a href="https://www.dividenddata.co.uk" target="_blank">www.dividenddata.co.uk</a>, a popular tool for researching upcoming dividends for companies listed in the UK. It features a front-end created in Next.js, that connects to a MongoDB database, stored with MongoDB Atlas.  
           </p>
 
           <p>
