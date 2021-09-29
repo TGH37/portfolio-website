@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Quantico:wght@300;400;600;700;900&display=swap");
 .hideMenu > ul {
   transform: scaleY(0);
   height: 0 !important;
@@ -45,6 +46,19 @@
   }
 }
 
+.sectionTitle {
+  position: relative;
+  border-top: 2px solid #cecece;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .sectionTitle {
+    grid-column: 1 / 3;
+  }
+}
+
 .titleName {
   grid-area: name;
 }
@@ -80,20 +94,8 @@
   }
 }
 
-.titleProfessionEngineer {
-  grid-area: sub2;
-}
-
-@media (min-width: 1024px) {
-  .titleProfessionEngineer {
-    position: absolute;
-    font-size: calc(1rem + 2vh);
-  }
-}
-
 .titleProfessionFullStack:hover,
-.titleProfessionEngineer:hover,
-.titleSocMed > div > a:hover {
+.titleSocMed a:hover {
   cursor: pointer;
   color: #78c0ff;
   transition-duration: 0.5s;
@@ -109,19 +111,6 @@
   grid-auto-columns: minmax(100%, auto);
   justify-items: center;
   grid-template-areas: "." "name" "soc-med" "sub1" "sub2";
-}
-
-.heroContainer::before {
-  content: "";
-  background-image: url("../../assets/homepage-landing-with-border.jpg");
-  opacity: 6%;
-  background-size: cover;
-  background-clip: content-box;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
 }
 
 @media (min-width: 1024px) {
@@ -146,6 +135,20 @@
     align-items: center;
     justify-self: center;
   }
+}
+
+.heroImg {
+  opacity: 6%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-clip: content-box;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
 }
 
 .heroTitleLine {
