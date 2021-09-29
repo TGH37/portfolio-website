@@ -21,7 +21,6 @@
     grid-template: repeat(3, 1fr) / auto;
     column-gap: 2rem;
     row-gap: 2rem;
-    min-height: 50vh;
     color: $color-background;
     justify-items: center;
     width: 100%;
@@ -32,6 +31,7 @@
 
     @media (min-width: $breakpoint-desktop ) {
         grid-column: 1 / 3;
+        max-height: 500px;
     };
 }
 
@@ -97,8 +97,8 @@
     $border-width: 2px;
 
     position: relative;
-    border-top: $border-width solid $color-primary;
-    border-bottom: $border-width solid $color-primary;
+    // border-top: $border-width solid $color-primary;
+    // border-bottom: $border-width solid $color-primary;
     padding: 2rem 0;
     text-align: center;
 
@@ -114,6 +114,7 @@
 
 .selectedProjectContainer {
     width: 100%;
+    font-family: $font-primary;
 
     @media (min-width: $breakpoint-desktop ) {
         display: grid;
@@ -190,7 +191,6 @@
     grid-row: 4/5;
     & .selectedProjectHeader {
         text-align: center;
-        padding-left: 2rem;
     }
 }
 

@@ -24,18 +24,31 @@ function ProjectCard(props: Props) {
   const {selectedProjectAccessor, updateSelectedProject} = useContext(GlobalCtx);
   const cursorHandlers = useCursorHandlers();
 
+  const handleCardClick = () => {
+    updateSelectedProject(accessor);
+  }
+
   return (
     <div className={styles.card} onClick={() => updateSelectedProject(accessor)} {...cursorHandlers}>
       <div className={styles.cardImgContainer}>
-        <img 
-          src={selectedProjectAccessor === accessor ? thumbnailImgs.thumbnail.src : thumbnailImgs.wireframe.src} 
-          alt={selectedProjectAccessor === accessor ? thumbnailImgs.thumbnail.alt : thumbnailImgs.wireframe.alt} 
-          className={`${selectedProjectAccessor === accessor ? styles.cardThumbnail : styles.cardThumbnailWireframe}`}
-        />
-      </div>
+          <img 
+                        src={thumbnailImgs.thumbnail.src} 
+                        alt={thumbnailImgs.thumbnail.alt}
+                        className={`${styles.cardThumbnail}`}
+                        style={{opacity: selectedProjectAccessor === accessor ? 1 : 0}}
+            />
+          <img 
+                        src={thumbnailImgs.wireframe.src} 
+                        alt={thumbnailImgs.wireframe.alt}
+                        className={`${styles.cardThumbnailWireframe}`}
+                        style={{opacity: selectedProjectAccessor === accessor ? 0 : 1}}
+            />
+          </div>
       <h1>{title}</h1>
       <div className={styles.cardContent}>{content}</div>
+      <a href="#selected-project">Learn More...</a>
     </div>
+          
   );
 };
  
