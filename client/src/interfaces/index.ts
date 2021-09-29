@@ -1,4 +1,7 @@
 import type { ReactElement } from "react";
+import { ProjectAccessor } from "../contexts/GlobalCtx";
+
+export type Device = "desktop" | "tablet" | "mobile"
 
 export type technologies = "react" 
 | "next" 
@@ -33,10 +36,10 @@ type viewingOptions = "code"
 export type deviceIcon = "desktop" | "tablet" | "mobile";
 
 export interface projectData {
-    accessor: string
+    accessor: ProjectAccessor
     title: string
     imgs?: any[]
-    thumbnailImgs?: {}
+    thumbnailImgs: {wireframe: {src: string, alt: string}, thumbnail: {src: string, alt: string}}
     deviceImgs: Array<{accessor: deviceIcon, src: any}>
     cardContent: JSX.Element
     technologies: technologies[],
