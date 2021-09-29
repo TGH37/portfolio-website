@@ -18,6 +18,8 @@ $nav-height: 50px;
     background-color: black;
     border-bottom: var($color-primary) 1px solid;
 
+    font-weight: 600;
+
 
     & > ul {
         grid-column: 1 / 6;
@@ -46,7 +48,7 @@ $nav-height: 50px;
     
     @media (min-width: $breakpoint-desktop) {
         visibility: visible;
-        right: 2rem;
+        right: 0;
         width: $nav-width-desktop;
         height: 100%;
         grid-template-rows: 15% 75% 10%;
@@ -57,8 +59,6 @@ $nav-height: 50px;
         & > ul {
             display: flex;
             flex-direction: column;
-            // row-gap: 1rem;  
-            // align-items: flex-end;
             font-size: 1vw * 2;
             grid-row: 2/3;
             border-top: none;

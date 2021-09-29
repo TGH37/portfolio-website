@@ -1,12 +1,23 @@
 @import 'config';
 @import 'utilities';
 
+html {
+    scroll-behavior: smooth;
+}
 body {
-    cursor: none !important;
+    // cursor: none !important;
+    font-family: $font-primary;
+    // margin: auto;
+}
+
+main {
+    max-width: 1998px;
+    margin: auto;
+
 }
 
 a {
     &:hover {
-        cursor: none;
+        // cursor: none;
     }
 }

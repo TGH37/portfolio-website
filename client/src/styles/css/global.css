@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Quantico:wght@300;400;600;700;900&display=swap");
 .hideMenu > ul {
   transform: scaleY(0);
   height: 0 !important;
@@ -45,10 +46,28 @@
   }
 }
 
-body {
-  cursor: none !important;
+.sectionTitle {
+  position: relative;
+  border-top: 2px solid #cecece;
+  padding: 2rem 0;
+  text-align: center;
 }
 
-a:hover {
-  cursor: none;
+@media (min-width: 1024px) {
+  .sectionTitle {
+    grid-column: 1 / 3;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quantico", Helvetica, sans-serif;
+}
+
+main {
+  max-width: 1998px;
+  margin: auto;
 }

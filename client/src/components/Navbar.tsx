@@ -4,7 +4,6 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import SocialMedia from './SocialMedia';
 
@@ -54,10 +53,10 @@ function Navbar() {
     <nav {...getNavDynAttributes()}>
       <FontAwesomeIcon className={`${styles.hideDownToTablet} ${styles.menuIcon}`} icon={faBars} size="2x" onClick={()=> setMenuVisible(!menuVisible)}/>
       <ul>
-        <li ><Link to="#" {...cursorHandlers}>Portfolio</Link></li>
-        <li><Link to="#" {...cursorHandlers}>Skills</Link></li>
-        <li><Link to="#" {...cursorHandlers}>About</Link></li>
-        <li><Link to="#" {...cursorHandlers}>Contact</Link></li>
+        <li ><a href="#portfolio" {...cursorHandlers}>Portfolio</a></li>
+        <li><a href="#skills" {...cursorHandlers}>Skills</a></li>
+        <li><a href="#about" {...cursorHandlers}>About</a></li>
+        <li><a href="#contact" {...cursorHandlers}>Contact</a></li>
       </ul>
       <SocialMedia forwardClassName={`${styles.alignBase}`}/>
 

@@ -18,3 +18,8 @@ $breakpoint-hd: 1998px;
 // Layout
 $nav-width-desktop: 12.91%;
 $mob-horizontal-margin: 1rem;
+
+// Typeography
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@300;400;600;700;900&display=swap');
+
+$font-primary: "Quantico",Helvetica,sans-serif;
