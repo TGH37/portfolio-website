@@ -8,10 +8,13 @@ function PortfolioSection() {
   const { projectData } = useContext(GlobalCtx);
 
   return projectData.length ? (
-    <section id="portfolio" className={styles.portfolioContainer}>
-      <h1 className={styles.selectedProjectTitle}>Featured Projects</h1>
-      <ProjectCardContainer />
-      <SelectedProject/>
+    <section id="portfolio" >
+      <h1 className={styles.sectionTitle}>Featured Projects</h1>
+      <div className={styles.portfolioContainer}>
+        <ProjectCardContainer />
+        
+        <SelectedProject/>
+      </div>
     </section>
   ) : <></>;
 };
