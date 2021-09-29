@@ -17,12 +17,12 @@
 
   return (
     <div className={`${styles.socMedNav} mob-visible ${props.forwardClassName}`} style={props.style}>
-      <a href={links.linkedIn}><FontAwesomeIcon icon={faLinkedin} cursor="pointer" size="1x"/></a>
+      <a href={links.linkedIn} target="_blank"><FontAwesomeIcon icon={faLinkedin} cursor="pointer" size="1x"/></a>
       {props.dividers}
-      <a href={links.github}><FontAwesomeIcon icon={faGithub} cursor="pointer" size="1x"/></a>
+      <a href={links.github} target="_blank"><FontAwesomeIcon icon={faGithub} cursor="pointer" size="1x"/></a>
     </div>
    );
  };
  
  export default SocialMedia;
- 
+    
