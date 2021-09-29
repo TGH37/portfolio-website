@@ -11,18 +11,24 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
+
     @media (min-width: $breakpoint-desktop ) {
-        flex-direction: row;
+        display: flow-root;
         text-align: left;
-        & :first-child {
-            flex-basis: 40%;
+    };
+}
+
+.aboutCopyContainer {
+    @media (min-width: $breakpoint-desktop ) {
+        position: relative;
+        margin-top: 180px;
+        & > p + p {
+            margin-top: 2rem;
         }
     };
-    
 }
 
 .imgContainer {
-
     position: relative;
     width: 100%;
     aspect-ratio: 1024 / 1121;
@@ -35,14 +41,14 @@
     }
     & svg {
         fill: $color-background;
-        & > * {
-            width: 100%;
-        }
     }
     
     @media (min-width: $breakpoint-tablet ) {
         
         width: 500px;
+        float: right;
+        shape-outside: url("../../assets/photos/me_grayscale_500.png");
+        z-index: 2;
     };
     @media (min-width: $breakpoint-desktop ) {
         flex-basis: 50%;

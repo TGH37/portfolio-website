@@ -73,11 +73,18 @@
 
 @media (min-width: 1024px) {
   .contentContainer {
-    flex-direction: row;
+    display: flow-root;
     text-align: left;
   }
-  .contentContainer :first-child {
-    flex-basis: 40%;
+}
+
+@media (min-width: 1024px) {
+  .aboutCopyContainer {
+    position: relative;
+    margin-top: 180px;
+  }
+  .aboutCopyContainer > p + p {
+    margin-top: 2rem;
   }
 }
 
@@ -99,13 +106,12 @@
   fill: #141414;
 }
 
-.imgContainer svg > * {
-  width: 100%;
-}
-
 @media (min-width: 768px) {
   .imgContainer {
     width: 500px;
+    float: right;
+    shape-outside: url("../../assets/photos/me_grayscale_500.png");
+    z-index: 2;
   }
 }
 
