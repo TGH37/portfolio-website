@@ -14,8 +14,8 @@ function AboutSection(props: Props) {
         <section id="about">
             <h1 className={styles.sectionTitle}>About Me</h1>
             <div className={styles.aboutContainer}>
-                <h3>
-                    I’m a full-stack web developer, specialising in (but not limited to) working with MERN stack technologies.
+                <h3 className={styles.aboutHeader}>
+                    Hi, I'm Tom<br/>A Full-Stack web developer, specialising in (but not limited to) working with <strong>MERN stack</strong> technologies.
                 </h3>
                 <div className={`${styles.contentContainer}`}>
                     <div className={`${styles.imgContainer}`} >
