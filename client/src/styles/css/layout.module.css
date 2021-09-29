@@ -50,9 +50,30 @@
 
 .sectionTitle {
   position: relative;
-  border-top: 2px solid #cecece;
+  font-size: 1.75rem;
   padding: 2rem 0;
-  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .sectionTitle:before, .sectionTitle:after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: #cecece;
+    vertical-align: middle;
+  }
+  .sectionTitle:before {
+    width: 100px;
+    margin-right: 1rem;
+  }
+  .sectionTitle:after {
+    width: 200px;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -110,9 +131,30 @@
 
 .sectionTitle {
   position: relative;
-  border-top: 2px solid #cecece;
+  font-size: 1.75rem;
   padding: 2rem 0;
-  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .sectionTitle:before, .sectionTitle:after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: #cecece;
+    vertical-align: middle;
+  }
+  .sectionTitle:before {
+    width: 100px;
+    margin-right: 1rem;
+  }
+  .sectionTitle:after {
+    width: 200px;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -170,9 +212,30 @@
 
 .sectionTitle {
   position: relative;
-  border-top: 2px solid #cecece;
+  font-size: 1.75rem;
   padding: 2rem 0;
-  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .sectionTitle:before, .sectionTitle:after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: #cecece;
+    vertical-align: middle;
+  }
+  .sectionTitle:before {
+    width: 100px;
+    margin-right: 1rem;
+  }
+  .sectionTitle:after {
+    width: 200px;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {

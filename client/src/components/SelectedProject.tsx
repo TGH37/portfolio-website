@@ -22,7 +22,9 @@ function SelectedProject(props: Props) {
         {sections.map((sectionObj) => (
             <>
               <h5 className={styles.selectedProjectHeader}>{sectionObj.title}</h5>
-              {sectionObj.content}
+              <div className={styles.projectContentContainer}>
+                {sectionObj.content}
+              </div>
             </>
           )
         )}

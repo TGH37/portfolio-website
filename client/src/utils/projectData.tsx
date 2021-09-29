@@ -92,7 +92,9 @@ const data: projectData[] = [
     sections: [
       { title: "Description", 
         content: <>
-          <p>For this project, I created a fully responsive blogging website that connects content stored in a Wordpress CMS, with a front-end that runs on React, via the Wordpress REST API. The front-end code is bundled and transpiled using a combination of Webpack, Babel and Typescript. To give any visitors a better user experience and reduce data transfer requirements, I performed optimisation enhancements, utilising session storage to cache data fetched from the server, and optimised front-end image assets. Furthermore, I created automated unit tests, to improve reliability for users.</p>
+          <p>For this project, I created a fully responsive blogging website that connects content stored in a Wordpress CMS, with a front-end that runs on React, via the Wordpress REST API. The front-end code is bundled and transpiled using a combination of Webpack, Babel and Typescript.</p>
+            
+            <p>To give any visitors a better user experience and reduce data transfer requirements, I performed optimisation enhancements, utilising session storage to cache data fetched from the server, and optimised front-end image assets. Furthermore, I created automated unit tests, to improve reliability for users.</p>
 
           <p>I undertook this process to better understand the Wordpress CMS, for use in my freelancing business, as well as push my web development knowledge by implementing my custom bundling solution. The blog is not currently being used; however I do intend to make a public blog in the future. </p>
         </>
@@ -114,6 +116,7 @@ const data: projectData[] = [
       {accessor: "site", href: ""},
       {accessor: "docs", href: ""},
     ],
+    colorStops: ["white"]
   },
   { accessor: "croc",
     title: "CRO Convergence Website Build",

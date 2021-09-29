@@ -47,10 +47,35 @@
     $border-width: 2px;
 
     position: relative;
-    border-top: $border-width solid $color-primary;
-    // border-bottom: $border-width solid $color-primary;
+    // border-top: $border-width solid $color-primary;
+    font-size: 1.75rem;
     padding: 2rem 0;
-    text-align: center;
+    
+    @media (min-width: $breakpoint-tablet ) {
+      font-size: 3rem;
+      text-align: left;
+      
+          &:before,
+          &:after
+          {
+            content:"";
+            display: inline-block;
+            height: 2px;
+            background-color: $color-primary;
+            vertical-align: middle;
+      
+          }
+      
+          &:before {
+            width: 100px;
+            margin-right: 1rem;
+          }
+          &:after {
+            width: 200px;
+            margin-left: 1rem;
+          }
+      
+    };
 
     @media (min-width: $breakpoint-desktop ) {
         grid-column: 1 / 3;

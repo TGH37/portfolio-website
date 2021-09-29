@@ -49,9 +49,30 @@
 
 .sectionTitle {
   position: relative;
-  border-top: 2px solid #cecece;
+  font-size: 1.75rem;
   padding: 2rem 0;
-  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .sectionTitle:before, .sectionTitle:after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: #cecece;
+    vertical-align: middle;
+  }
+  .sectionTitle:before {
+    width: 100px;
+    margin-right: 1rem;
+  }
+  .sectionTitle:after {
+    width: 200px;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -109,9 +130,30 @@
 
 .sectionTitle {
   position: relative;
-  border-top: 2px solid #cecece;
+  font-size: 1.75rem;
   padding: 2rem 0;
-  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .sectionTitle:before, .sectionTitle:after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    background-color: #cecece;
+    vertical-align: middle;
+  }
+  .sectionTitle:before {
+    width: 100px;
+    margin-right: 1rem;
+  }
+  .sectionTitle:after {
+    width: 200px;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -265,19 +307,40 @@
 
 .selectedProjectTitle {
   position: relative;
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
 @media (min-width: 1024px) {
   .selectedProjectTitle {
     grid-column: 1 / 3;
+    text-align: left;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-left: 75px;
+    margin-bottom: 0;
+  }
+  .selectedProjectTitle:before, .selectedProjectTitle:after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    background-color: #cecece;
+    vertical-align: middle;
+  }
+  .selectedProjectTitle:before {
+    width: 75px;
+    margin-right: 1rem;
+  }
+  .selectedProjectTitle:after {
+    width: 150px;
+    margin-left: 1rem;
   }
 }
 
 .selectedProjectHeader {
   font-weight: bold;
   font-size: 1.25rem;
+  margin-bottom: .5rem;
 }
 
 .selectedProjectContainer {
@@ -305,6 +368,10 @@
     word-wrap: break-word;
     width: 100%;
   }
+}
+
+.projectContentContainer > p:first-child {
+  position: relative;
 }
 
 .projectCtaBtnContainer {
