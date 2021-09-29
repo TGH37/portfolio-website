@@ -1,6 +1,12 @@
 @import 'config';
 @import 'utilities';
 
+.contactSectionContainer {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: $color-primary;
+}
+
 .contactForm {
     display: grid;
     min-width: 100%;
@@ -25,6 +31,7 @@
       display: block;
       margin-bottom: 0.5rem;
       font-weight: bold;
+      text-align: left;
     }
     & input {
         min-width: 100%;
@@ -101,5 +108,23 @@ color: $color-primary;
 }
 
 .contactLine {
-    color: $color-primary;
+    padding: 0.5rem 2rem;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    font-weight: bold;
+
+    
+}
+
+.contactOptions {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    word-wrap: break-word;
+    
+    @media (min-width: $breakpoint-tablet ) {
+        justify-content: space-around;
+        flex-direction: row;
+        
+    };
 }

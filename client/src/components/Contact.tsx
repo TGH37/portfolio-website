@@ -36,35 +36,35 @@ function Contact(props: Props) {
   "Unfortunately something went wrong when submitting your enquiry, please try again or call us directly on " + contactNumber;
 
     return (
-        <>
-            <form action="submit" className={styles.contactForm}>
-                <div>
-                    <label htmlFor="" className={styles.requiredFormField}>Name </label>
-                    <input type="text" name="name_field" placeholder="Please Enter Your Name" required/>
+        <section id="contact">
+            <h1 className={styles.sectionTitle}>Contact Me</h1>
+            <div className={styles.contactSectionContainer}>
+                <h3>
+                    If you're interested in talking to me about my work, please either get in contact with me directly, or leave me a message using the contact form below.
+                </h3>
+                <div className={styles.contactOptions}>
+                    <div className={styles.contactLine}><FontAwesomeIcon icon={faPhone} style={{color: "lightgreen"}}/><span>&nbsp;&nbsp;{contactNumber}</span></div>
+                    <div className={styles.contactLine}><FontAwesomeIcon icon={faEnvelope} style={{color: "beige"}}/><span>&nbsp;&nbsp;{"t.hayton37@gmail.com"}</span></div>
                 </div>
-                <div>
-                    <label htmlFor="" className={styles.requiredFormField}>Phone </label>
-                    <input type="text" name="phone_field" placeholder="e.g. +447123456789" required/>
-                </div>
-                <div>
-                    <label htmlFor="" className={styles.requiredFormField}>Email </label>
-                    <input type="email" name="email_field" placeholder="e.g. email@address.com" required/>
-                </div>
-                {/* <div>
-                    <label htmlFor="">Company Name: </label>
-                    <input type="text" name="company_name_field" placeholder="Please Enter the Name of Your Company" />
+                <form action="submit" className={styles.contactForm}>
+                    <div>
+                        <label htmlFor="" className={styles.requiredFormField}>Name </label>
+                        <input type="text" name="name_field" placeholder="Please Enter Your Name" required/>
                     </div>
                     <div>
-                    <label htmlFor="">Website Address: </label>
-                    <input type="text" name="web_address_field" placeholder="www.website.com" />
-                </div> */}
-                <textarea name="message_field" id="message" rows={10} placeholder="Send me a message..." ></textarea>
-                <button className={`${styles.formSubmitBtn} ${styles.buttonSuccess}`}>Submit</button>
-                <div className={styles.confirmationLine} style={inlineSubmitMsgStyle}>{inlineSubmitMsg}</div>
-            </form>
-            <div className={styles.contactLine}><FontAwesomeIcon icon={faPhone} /><span>{" " + contactNumber}</span></div>
-            <div className={styles.contactLine}><FontAwesomeIcon icon={faEnvelope}/><span>{" " + "t.hayton37@gmail.com"}</span></div>
-         </>
+                        <label htmlFor="" className={styles.requiredFormField}>Phone </label>
+                        <input type="text" name="phone_field" placeholder="e.g. +447123456789" required/>
+                    </div>
+                    <div>
+                        <label htmlFor="" className={styles.requiredFormField}>Email </label>
+                        <input type="email" name="email_field" placeholder="e.g. email@address.com" required/>
+                    </div>
+                    <textarea name="message_field" id="message" rows={10} placeholder="Send me a message..." ></textarea>
+                    <button className={`${styles.formSubmitBtn} ${styles.buttonSuccess}`}>Submit</button>
+                    <div className={styles.confirmationLine} style={inlineSubmitMsgStyle}>{inlineSubmitMsg}</div>
+                </form>
+            </div>
+         </section>
     );
 };
 
