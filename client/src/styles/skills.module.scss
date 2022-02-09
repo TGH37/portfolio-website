@@ -26,7 +26,7 @@
     margin-left: 5%;
     position: relative;
     & > * {
-        flex-basis: 50%;
+        flex-basis: 100%;
     }
     @media (min-width: $breakpoint-desktop ) {
         & > * {
@@ -36,7 +36,7 @@
             justify-content: center;
             // align-items: center;
         }
-        flex-basis: 25%;
+        flex-basis: 50%;
         
     };
 }
@@ -46,7 +46,7 @@
     position: relative;
     
     @media (min-width: $breakpoint-desktop ) {
-        flex-basis: 75%;
+        flex-basis: 50%;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 50% 50%;
         row-gap: 1em;
@@ -55,19 +55,20 @@
     };
 }
 
-.divider {
-    position: absolute;
-    fill: $color-background;
-    stroke: $color-primary;
-    stroke-width: 4px;
-    top: 50%;
-}
+// .divider {
+//     position: absolute;
+//     fill: $color-background;
+//     stroke: $color-primary;
+//     stroke-width: 4px;
+//     top: 50%;
+// }
 
 
 .skillCategoryCard {
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    cursor: pointer;
 
     & > ul {
         flex-basis: 75%;
@@ -82,7 +83,9 @@
         flex-direction: column;
         justify-content: space-evenly;
         border-radius: 10px;
-        transition: box-shadow 0.5s, border 0.5s;
+        transition: box-shadow 0.5s, border 0.5s, border-radius 0.5s;
+
+
         & > ul {
             flex-basis: auto;
         }
@@ -91,11 +94,16 @@
         }
         &:hover {
             border: 1px solid rgba($color: $color-primary, $alpha: 0.1);
-            box-shadow: 2px 5px rgba($color: $color-primary, $alpha: 0.1);
         }
         
     };
+};
 
+.activeSkillsCard {
+    border: 1px solid $color-secondary;
+    &:hover {
+        border: 1px solid $color-secondary !important;
+    }
 }
 
 .skillCategoryBgImg {
@@ -118,4 +126,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+        // & h3 {
+        //     z-index: 2;
+        // }
+
+        // & svg {
+        //     position: absolute;
+        //     z-index: 0;
+        // }
+
 }

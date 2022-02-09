@@ -57,7 +57,7 @@
 @media (min-width: 768px) {
   .sectionTitle {
     font-size: 3rem;
-    text-align: left;
+    text-align: center;
   }
   .sectionTitle:before, .sectionTitle:after {
     content: "";
@@ -67,11 +67,11 @@
     vertical-align: middle;
   }
   .sectionTitle:before {
-    width: 100px;
+    width: 10vw;
     margin-right: 1rem;
   }
   .sectionTitle:after {
-    width: 200px;
+    width: 10vw;
     margin-left: 1rem;
   }
 }
@@ -138,7 +138,7 @@
 @media (min-width: 768px) {
   .sectionTitle {
     font-size: 3rem;
-    text-align: left;
+    text-align: center;
   }
   .sectionTitle:before, .sectionTitle:after {
     content: "";
@@ -148,11 +148,11 @@
     vertical-align: middle;
   }
   .sectionTitle:before {
-    width: 100px;
+    width: 10vw;
     margin-right: 1rem;
   }
   .sectionTitle:after {
-    width: 200px;
+    width: 10vw;
     margin-left: 1rem;
   }
 }
@@ -253,7 +253,7 @@
 @media (min-width: 768px) {
   .sectionTitle {
     font-size: 3rem;
-    text-align: left;
+    text-align: center;
   }
   .sectionTitle:before, .sectionTitle:after {
     content: "";
@@ -263,11 +263,11 @@
     vertical-align: middle;
   }
   .sectionTitle:before {
-    width: 100px;
+    width: 10vw;
     margin-right: 1rem;
   }
   .sectionTitle:after {
-    width: 200px;
+    width: 10vw;
     margin-left: 1rem;
   }
 }

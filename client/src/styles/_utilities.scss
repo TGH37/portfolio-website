@@ -53,7 +53,7 @@
     
     @media (min-width: $breakpoint-tablet ) {
       font-size: 3rem;
-      text-align: left;
+      text-align: center;
       
           &:before,
           &:after
@@ -67,11 +67,11 @@
           }
       
           &:before {
-            width: 100px;
+            width: 10vw;
             margin-right: 1rem;
           }
           &:after {
-            width: 200px;
+            width: 10vw;
             margin-left: 1rem;
           }
       
