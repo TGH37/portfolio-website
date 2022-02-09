@@ -40,22 +40,24 @@ function DeviceIcons(props: Props) {
         return accessor === selectedDeviceAccessor ? 
         {
           className: `${styles.deviceIcon} ${styles.activeIcon}`,
-          'aria-active': true,
+          'aria-current': true,
         } :
         {
           className: styles.deviceIcon,
-          'aria-active': false,
+          'aria-current': false,
         };
       };
     
     return (
         <div className={styles.deviceIconContainer}>
             {icons.map((iconObj) => (
-                <FontAwesomeIcon icon={iconObj.icon}
-                onClick={() => updateSelectedDevice(iconObj.accessor)}
-                title="Preview project in desktop (4K) screen layout"
-                {...getIconAttrs(iconObj.accessor)}
-            />
+                    <FontAwesomeIcon 
+                        icon={iconObj.icon}
+                        onClick={() => updateSelectedDevice(iconObj.accessor)}
+                        key={iconObj.accessor}
+                        title="Preview project in desktop (4K) screen layout"
+                        {...getIconAttrs(iconObj.accessor)}
+                    />
             ))}
         </div>
     );

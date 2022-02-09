@@ -13,7 +13,7 @@ function TechnologyList(props: Props) {
     <div className={styles.techLogoContainer}> 
       {technologiesUsed.map((accessor: technologies) => {
         const { src } : {src: JSX.Element} = technologyLogos.get(accessor);
-        return <div>{src}</div>
+        return <div key={accessor}>{src}</div>
       })}
     </div>
   );

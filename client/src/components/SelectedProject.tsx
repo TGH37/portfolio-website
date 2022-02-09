@@ -20,12 +20,12 @@ function SelectedProject(props: Props) {
     <ProjectDevicePreview/>
       <div className={styles.projectDetailsContainer}>
         {sections.map((sectionObj) => (
-            <>
+            <React.Fragment key={sectionObj.title}>
               <h5 className={styles.selectedProjectHeader}>{sectionObj.title}</h5>
               <div className={styles.projectContentContainer}>
                 {sectionObj.content}
               </div>
-            </>
+            </React.Fragment>
           )
         )}
       </div>
@@ -35,7 +35,7 @@ function SelectedProject(props: Props) {
       </div>
       <div className={styles.projectCtaBtnContainer}>
         {projectData[selectedProjectIdx].links.map((linkObj) => (
-        <a href={linkObj.href} target="_blank"><button className={styles.projectCtaBtn} tabIndex={-1}>VIEW {linkObj.accessor.toLocaleUpperCase()}</button></a>
+        <a href={linkObj.href} target="_blank" key={linkObj.accessor}><button className={styles.projectCtaBtn} tabIndex={-1}>VIEW {linkObj.accessor.toLocaleUpperCase()}</button></a>
         ))}
       </div>
   </div>
