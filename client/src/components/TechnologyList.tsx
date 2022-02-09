@@ -1,6 +1,5 @@
 import styles from '../styles/css/portfolio.module.css';
 import { technologyLogos } from '../utils/projectData';
-import type { technologies } from '../interfaces';
 
 interface Props {
   technologiesUsed: technologies[]

@@ -1,6 +1,5 @@
 import { useState, useContext, ReactElement } from 'react';
 import styles from '../styles/css/portfolio.module.css';
-import { Device } from '../interfaces';
 import DeviceIcons from './DeviceIcons';
 import { GlobalCtx } from '../contexts/GlobalCtx';
 

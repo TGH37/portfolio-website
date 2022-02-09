@@ -2,12 +2,7 @@ import { useContext, } from 'react';
 import type { ReactElement } from 'react';
 import styles from '../styles/css/portfolio.module.css';
 import useCursorHandlers from '../hooks/useCursorHandlers';
-import { GlobalCtx, ProjectAccessor } from '../contexts/GlobalCtx';
-
-interface ImageAttributes {
-  src: string
-  alt: string
-}
+import { GlobalCtx } from '../contexts/GlobalCtx';
 
 interface Props {
   accessor: ProjectAccessor

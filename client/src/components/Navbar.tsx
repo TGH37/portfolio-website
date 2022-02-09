@@ -14,20 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/css/layout.module.css';
 
-export type mediaBreakpoints = {
-  xs?: boolean
-  sm?: boolean
-  md?: boolean
-  lg?: boolean
-}
-export type mediaBreakpointStrings = {
-  xs: string
-  sm: string
-  md: string
-  lg: string
-}
-
-
 function Navbar() {
   const [menuVisible, setMenuVisible] = useState(false);
   const {queryMatch: mediaBreakpoints} = useBreakpoint();

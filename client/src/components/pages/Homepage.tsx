@@ -4,8 +4,8 @@
  */
 
 import {useEffect, useState, useContext} from 'react';
-import useBreakpoint, { mediaBreakpoints }  from '../../hooks/useBreakpoint';
-import { GlobalCtx, ProjectAccessor } from '../../contexts/GlobalCtx';
+import useBreakpoint from '../../hooks/useBreakpoint';
+import { GlobalCtx } from '../../contexts/GlobalCtx';
 
 import projectData from "../../utils/projectData";
 import Navbar from '../Navbar';
@@ -17,13 +17,15 @@ import Contact from '../Contact';
 import AnimatedCursor from '../AnimatedCursor';
 
 function Homepage() {
-  // const mediaBreakpoints = useBreakpoint();
-  // const [shouldDisplayCursor, setShouldDisplayCursor] = useState(false);
+  const mediaBreakpoints = useBreakpoint();
+  const [shouldDisplayCursor, setShouldDisplayCursor] = useState(false);
 
-  // useEffect(() => {
-  //   if(!mediaBreakpoints.md) setShouldDisplayCursor(true);
-  //   else setShouldDisplayCursor(false);
-  // }, [mediaBreakpoints.md]);
+  const { queryMatch } = mediaBreakpoints;
+
+  useEffect(() => {
+    if(!queryMatch.md) setShouldDisplayCursor(true);
+    else setShouldDisplayCursor(false);
+  }, [queryMatch.md]);
 
   const {setProjectData} = useContext(GlobalCtx);
 
@@ -41,7 +43,7 @@ function Homepage() {
         <AboutSection />
         <Contact />
       </main>
-      {/* {shouldDisplayCursor ? <AnimatedCursor /> : <></>} */}
+      {shouldDisplayCursor ? <AnimatedCursor /> : <></>}
     </>
   )
 }

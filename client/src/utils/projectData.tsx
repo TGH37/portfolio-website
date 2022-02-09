@@ -1,4 +1,3 @@
-import type { projectData, technologies } from '../interfaces';
 import { Link } from 'react-router-dom'
 
 // logo images

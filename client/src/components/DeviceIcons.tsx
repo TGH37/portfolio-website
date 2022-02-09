@@ -1,14 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptop, faMobileAlt, faTabletAlt} from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/css/portfolio.module.css';
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import type { Device } from '../interfaces';
-
-interface Icon {
-    accessor: Device
-    icon: IconDefinition
-    alt: string
-};
 
 interface Props {
     selectedDeviceAccessor: Device

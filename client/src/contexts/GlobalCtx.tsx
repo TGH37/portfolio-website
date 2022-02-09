@@ -1,14 +1,8 @@
 import React, { createContext, useState } from 'react';
-import { projectData } from '../interfaces'
 
 interface Props {
     children: any
 };
-
-export type ProjectAccessor = 
-| "keto-blog"
-| "croc"
-| "div-data"
 
 interface GlobalState {
     selectedProjectAccessor: ProjectAccessor

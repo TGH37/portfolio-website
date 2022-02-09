@@ -5,19 +5,6 @@
 import React, { useContext } from 'react';
 import { BreakpointContext } from '../contexts/MediaBreakpointCtx';
 
-export type mediaBreakpoints = {
-  xs?: boolean
-  sm?: boolean
-  md?: boolean
-  lg?: boolean
-}
-export type mediaBreakpointStrings = {
-  xs: string
-  sm: string
-  md: string
-  lg: string
-}
-
 function useBreakpoint() {
   const context = useContext(BreakpointContext);
   if(!context) {
