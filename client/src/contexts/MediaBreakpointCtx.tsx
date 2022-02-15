@@ -2,13 +2,8 @@
  * taken from https://medium.com/better-programming/how-to-use-media-queries-programmatically-in-react-4d6562c3bc97
  */
 
- import React, { useEffect, createContext, useState, ReactElement } from 'react'
- import { mediaBreakpoints, mediaBreakpointStrings } from '../hooks/useBreakpoint';
- 
- interface ctxState {
-   queryMatch?: mediaBreakpoints
-   queries: mediaBreakpointStrings
- }
+ import React, { useEffect, createContext, useState, ReactElement } from 'react' 
+
  
  const initialState: ctxState = {
    queryMatch: {},
