@@ -2,7 +2,7 @@
 @import 'utilities';
 
 .titleName {
-    grid-area: name;
+    grid-area: 'name';
     &:hover {
         cursor: default
     }
@@ -12,7 +12,7 @@
 }
 
 .titleSocMed {
-    grid-area: soc-med;
+    grid-area: 'soc-med';
     @media (min-width: $breakpoint-desktop) {
         & a{
             font-size: calc(3rem + 2vh);
@@ -20,7 +20,7 @@
     }
 }
 .titleProfessionFullStack {
-    grid-area: sub1;
+    grid-area: 'sub1';
     @media (min-width: $breakpoint-desktop) {
         position: absolute;
         font-size: calc(1rem + 2vh);
@@ -51,13 +51,13 @@
     "."
     "name"
     "soc-med"
-    "sub1"
-    "sub2";
+    "sub1";
+    // "sub2";
 
     @media (min-width: $breakpoint-desktop) {
         
         display: grid;
-        width: calc(100% - $nav-width-desktop);
+        width: calc(100% - 12.91%);
         position: relative;
         padding: 20vh 0;
         
@@ -69,8 +69,8 @@
         grid-template-areas: 
         "name"
         "soc-med"
-        "sub1"
-        "sub2";
+        "sub1";
+        // "sub2";
 
         & h1, h2{
             margin: 0;
