@@ -81,7 +81,7 @@
 }
 
 .titleName {
-  grid-area: 'name';
+  grid-area: name;
 }
 
 .titleName:hover {
@@ -95,7 +95,7 @@
 }
 
 .titleSocMed {
-  grid-area: 'soc-med';
+  grid-area: soc-med;
 }
 
 @media (min-width: 1024px) {
@@ -105,7 +105,7 @@
 }
 
 .titleProfessionFullStack {
-  grid-area: 'sub1';
+  grid-area: sub1;
 }
 
 @media (min-width: 1024px) {
@@ -158,7 +158,7 @@
 }
 
 .heroImg {
-  opacity: 6%;
+  opacity: 7%;
   width: 100%;
   height: 100%;
   background-size: cover;

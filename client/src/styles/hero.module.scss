@@ -2,7 +2,7 @@
 @import 'utilities';
 
 .titleName {
-    grid-area: 'name';
+    grid-area: name;
     &:hover {
         cursor: default
     }
@@ -12,7 +12,7 @@
 }
 
 .titleSocMed {
-    grid-area: 'soc-med';
+    grid-area: soc-med;
     @media (min-width: $breakpoint-desktop) {
         & a{
             font-size: calc(3rem + 2vh);
@@ -20,7 +20,7 @@
     }
 }
 .titleProfessionFullStack {
-    grid-area: 'sub1';
+    grid-area: sub1;
     @media (min-width: $breakpoint-desktop) {
         position: absolute;
         font-size: calc(1rem + 2vh);
@@ -88,7 +88,7 @@
 }
 
 .heroImg {
-    opacity: 6%;
+    opacity: 7%;
     width: 100%;
     height: 100%;
     background-size: cover;
