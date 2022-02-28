@@ -10,6 +10,7 @@ interface GlobalState {
     projectData: projectData[] | []
     setProjectData: Function
     selectedProjectIdx: number
+    updateSelectedIdx: Function
 };
 
 const initialState: GlobalState = {
@@ -17,7 +18,8 @@ const initialState: GlobalState = {
     updateSelectedProject: () => {},
     projectData: [],
     setProjectData: () => {},
-    selectedProjectIdx: 0
+    selectedProjectIdx: 0,
+    updateSelectedIdx: () => {}
 };
 
 export const GlobalCtx = createContext(initialState);
@@ -34,6 +36,10 @@ function GlobalProvider(props: Props) {
         const matchedProj: number = projectData.findIndex((project: projectData) => project.accessor === accessor);
         return !!(matchedProj + 1) ? matchedProj : 0;
       };
+    const getProjectAccessor = (idx: number): ProjectAccessor => {
+        if(!projectData) return "keto-blog";
+        return projectData[idx].accessor;
+      };
     
     const [selectedProjectIdx, setSelectedProjectIdx] = useState<number>(getProjectIdx(selectedProjectAccessor));
 
@@ -41,13 +47,17 @@ function GlobalProvider(props: Props) {
         setSelectedProjectAccessor(accessor);
         setSelectedProjectIdx(getProjectIdx(accessor));
     };
+    const updateSelectedIdx = (idx: number) => {
+        setSelectedProjectAccessor(getProjectAccessor(idx));
+        setSelectedProjectIdx(idx);
+    };
 
     return (
         <GlobalCtx.Provider value={
             {
                 selectedProjectAccessor, updateSelectedProject,
                 projectData, setProjectData,
-                selectedProjectIdx
+                selectedProjectIdx, updateSelectedIdx
             }
         }>
             { children }
