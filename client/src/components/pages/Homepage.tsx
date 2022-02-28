@@ -43,7 +43,7 @@ function Homepage() {
         <AboutSection />
         <Contact />
       </main>
-      {shouldDisplayCursor ? <AnimatedCursor /> : <></>}
+      {/* {shouldDisplayCursor ? <AnimatedCursor /> : <></>} */}
     </>
   )
 }

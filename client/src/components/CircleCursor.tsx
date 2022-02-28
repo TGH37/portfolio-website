@@ -8,7 +8,7 @@ interface Props {
     y?: number
 };
 
-const CircleCursor = (props: Props) => {
+const CircleCursor = forwardRef((props: Props, ref: RefObject<SVGSVGElement | null>) => {
     const {
         x,
         y,
@@ -30,11 +30,11 @@ const CircleCursor = (props: Props) => {
         })
 
     return (
-        <animated.svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" className={styles.cursorCircle} style={{left, top, transform}}>
+        <animated.svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" className={styles.cursorCircle} style={{left, top, transform}} ref={ref}>
             <circle cx={7.5} cy={7.5} r={4.5}/>
         </animated.svg>
     );
-}
+})
 
 
 export default CircleCursor;
