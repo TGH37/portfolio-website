@@ -21,3 +21,24 @@ a {
         // cursor: none;
     }
 }
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(#cecece, 0.25) #141414;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(#cecece, 0.25);
+  border-radius: 20px;
+  border: 3px solid #141414;
+}

@@ -32,7 +32,7 @@ interface projectData {
   colorStops?: string[]
 };
 
-type ProjectAccessor = "freecycle" | "croc" | "ipTracker" | "div-data" | 'keto-blog';
+type ProjectAccessor = "freecycle" | "croc" | "ipTracker" | "div-data" | 'keto-blog' | 'wtd' | 'equine';
 
 type Device = "desktop" | "tablet" | "mobile"
 
@@ -46,6 +46,9 @@ type technologies = "react"
 | "scss"
 | "javascript"
 | "typescript"
+| "php"
+| "wordpress"
+| "elementor"
 | "webpack"
 | "babel"
 | "github"
@@ -75,3 +78,27 @@ interface VerboseRect {
   width: number
   height: number
 };
+
+interface SkillsObj {
+  iconObj: ImageAttributes
+  title: HardSkill
+  skillsList: string[]
+  isActive: boolean
+  wasActive: boolean
+  description: SerializedData[] | JSX.Element
+};
+
+interface SerializedLink {
+  href: string
+  noFollow?: boolean
+}
+
+interface SerializedData {
+  type: "paragraph" | "heading"
+  children: {
+      text: string
+      underlined?: boolean
+      bold?: boolean
+      link?: SerializedLink | null
+  }[]
+}
