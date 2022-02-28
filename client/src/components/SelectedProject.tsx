@@ -21,7 +21,7 @@ function SelectedProject(props: Props) {
       <div className={styles.projectDetailsContainer}>
         {sections.map((sectionObj) => (
             <React.Fragment key={sectionObj.title}>
-              <h5 className={styles.selectedProjectHeader}>{sectionObj.title}</h5>
+              <h5 className={styles.selectedProjectHeader} style={{color: 'gainsboro'}}>// {sectionObj.title}</h5>
               <div className={styles.projectContentContainer}>
                 {sectionObj.content}
               </div>

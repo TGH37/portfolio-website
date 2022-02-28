@@ -47,6 +47,7 @@
 }
 
 .sectionTitle {
+  color: gainsboro;
   position: relative;
   font-size: 1.75rem;
   padding: 2rem 0;
