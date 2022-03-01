@@ -15,7 +15,7 @@ function AboutSection(props: Props) {
             <h1 className={styles.sectionTitle}>About Me</h1>
             <div className={styles.aboutContainer}>
                 <h3 className={styles.aboutHeader}>
-                    Hi, I'm Tom<br/>A Full-Stack web developer, specialising in (but not limited to) working with <strong>MERN stack</strong> technologies.
+                    Hi, I'm Tom<br/>A former engineer turned freelance web developer, specialising in (but not limited to) <strong>MERN stack</strong> technologies.
                 </h3>
                 <div className={`${styles.contentContainer}`}>
                     <div className={`${styles.imgContainer}`} >
@@ -35,23 +35,23 @@ function AboutSection(props: Props) {
                         <SVGMask />
                     </div>
                     <div className={styles.aboutCopyContainer}>
-                        <p> 
-                            I’ve been filling up my portfolio with personal projects for just over a year, after leaving my career in engineering, to follow the work that I am most passionate about.
+                        <p>
+                            After switching careers from engineering to web development, I have dedicated my time to learning the skills required to provide web development services in a professional capacity, starting a freelancing business along the way.
                         </p>
                         <p> 
-                            I've undertaken a wide range of projects that have all tested and cemented my skills in many different ways, from creative design, to technical implementation.
+                            I am completely self-taught, learning from numerous online sources as well as busting out the good old-fashioned elbow grease and completing projects and challenges I have set myself to test my skills. I've learned a good deal about the technologies and processes involved, across the stack, to take a web app from concept to deployment.  
                         </p>
                         <p>
-                            My academic and professional experience as an engineer has given me plenty of skills that I find myself using in my work as a web developer. Having plenty of experience working with teams of various sizes, clients of many different backgrounds and managing a wide spectrum of projects, I have a rounded skillset that gives me the tools and confidence to take on any challenge.
-                    </p>
+                            My academic and professional experience as an engineer has given me plenty of skills that I find myself using in my work as a web developer. Having plenty of experience working with teams of various sizes, clients of many different backgrounds, and managing a wide spectrum of projects, I have a rounded skill set that gives me the tools and confidence to take on any challenge.
+                        </p>
                     </div>
 
                 </div>
-                <h3 className={styles.quote}>
+                {/* <h3 className={styles.quote}>
                     <span>We are what we repeatedly do...<br/>Excellence, therefore, isn't just an act, but a habit</span>
                     <br/><br/>
                     - Aristotle
-                </h3>
+                </h3> */}
             </div>
         </section>
     );
