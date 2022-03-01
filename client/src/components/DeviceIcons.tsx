@@ -5,10 +5,11 @@ import styles from '../styles/css/portfolio.module.css';
 interface Props {
     selectedDeviceAccessor: Device
     updateSelectedDevice: Function
+    imgArry: { accessor: Device; src: any; }[]
 };
 
 function DeviceIcons(props: Props) {
-    const {selectedDeviceAccessor, updateSelectedDevice} = props;
+    const {selectedDeviceAccessor, updateSelectedDevice, imgArry} = props;
 
     const icons: Icon[] = [
         {
@@ -28,6 +29,11 @@ function DeviceIcons(props: Props) {
         },
     ];
 
+    const displayIcons = icons.flatMap( (icon) => {
+        const imgMatch = imgArry.find(imgObj => imgObj.accessor === icon.accessor);
+        return imgMatch ? [icon] : [];
+    })
+
     const getIconAttrs = (accessor: Device) => {
         return accessor === selectedDeviceAccessor ? 
         {
@@ -42,7 +48,7 @@ function DeviceIcons(props: Props) {
     
     return (
         <div className={styles.deviceIconContainer}>
-            {icons.map((iconObj) => (
+            {displayIcons.map((iconObj) => (
                     <FontAwesomeIcon 
                         icon={iconObj.icon}
                         onClick={() => updateSelectedDevice(iconObj.accessor)}

@@ -26,13 +26,12 @@ import {ReactComponent as ElementorLogo} from '../assets/logos/elementor.svg'
 import FreecycleOriginal from '../assets/original.png';
 import IPTrackerThumbnail from '../assets/ip-tracker-thumbnail.png';
 import CROCThumbnail from '../assets/croc-thumbnail_500.png';
-import KetoBlogThumbnail from '../assets/keto-blog-thumbnail_500.png';
+import WPRestReactThumbnail from '../assets/keto-blog-thumbnail_500.png';
 import DivDataThumbnail from '../assets/div-data.jpg';
 import WTDThumbnail from '../assets/wtd.jpg';
 import EquineThumbnail from '../assets/equine.jpg';
-// import KetoBlogThumbnail from '../assets/keto-blog-thumbnail.png';
 import CROCThumbnail_Wireframe from '../assets/svg/cro-convergence-wireframe.svg'
-import KetoBlogThumbnail_Wireframe from '../assets/svg/keto-blog-wireframe.svg'
+import WPRestReactThumbnail_Wireframe from '../assets/svg/keto-blog-wireframe.svg'
 import DivDataThumbnail_Wireframe from '../assets/svg/div-data-wireframe.svg'
 import WTDThumbnail_Wireframe from '../assets/svg/wtd-wireframe.svg'
 import EquineThumbnail_Wireframe from '../assets/svg/equine-wireframe.svg'
@@ -42,15 +41,19 @@ import IPTrackerThumbnail_Wireframe from '../assets/svg/equine-wireframe.svg'
 import ipTrackerDesktop from '../assets/device-images/ip-tracker-desktop.png'
 import ipTrackerTablet from '../assets/device-images/ip-tracker-tablet.png'
 import ipTrackerMobile from '../assets/device-images/ip-tracker-mobile.png'
+import divDataDesktop from '../assets/device-images/div-data-desktop_500.png'
 import crocDesktop from '../assets/device-images/croc-desktop_500.png'
 import crocTablet from '../assets/device-images/croc-tablet_200.png'
 import crocMobile from '../assets/device-images/croc-mobile_150.png'
-import blogDesktop from '../assets/device-images/blog-desktop_500.png'
-import blogTablet from '../assets/device-images/blog-tablet_200.png'
-import blogMobile from '../assets/device-images/blog-mobile_150.png'
-// import blogDesktop from '../assets/device-images/blog-desktop.png'
-// import blogTablet from '../assets/device-images/blog-tablet.png'
-// import blogMobile from '../assets/device-images/blog-mobile.png'
+import WPRestReactDesktop from '../assets/device-images/wp-rest-react-desktop_500.png'
+import WPRestReactTablet from '../assets/device-images/wp-rest-react-tablet_200.png'
+import WPRestReactMobile from '../assets/device-images/wp-rest-react-mobile_150.png'
+import wtdDesktop from '../assets/device-images/wtd-desktop_500.png'
+import wtdTablet from '../assets/device-images/wtd-tablet_200.png'
+import wtdMobile from '../assets/device-images/wtd-mobile_150.png'
+import equineDesktop from '../assets/device-images/equine-desktop_500.png'
+import equineTablet from '../assets/device-images/equine-tablet_200.png'
+import equineMobile from '../assets/device-images/equine-mobile_150.png'
 
 export const technologyLogos: Map<technologies, any> = new Map(
   [
@@ -81,13 +84,13 @@ const data: projectData[] = [
   { accessor: "keto-blog",
     title: "Lifestyle Blog",
     thumbnailImgs: {
-      wireframe: {src: KetoBlogThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
-      thumbnail: {src: KetoBlogThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
+      wireframe: {src: WPRestReactThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
+      thumbnail: {src: WPRestReactThumbnail, alt: `Thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
     },
     deviceImgs: [
-      {accessor: "desktop", src: blogDesktop},
-      {accessor: "tablet", src: blogTablet},
-      {accessor: "mobile", src: blogMobile},
+      {accessor: "desktop", src: WPRestReactDesktop},
+      {accessor: "tablet", src: WPRestReactTablet},
+      {accessor: "mobile", src: WPRestReactMobile},
     ],
     cardContent: <p>A blogging website running on a Wordpress CMS and a front-end created with React, connected via the Wordpress REST API. Features a custom bundling solution, unit testing and optimisation.</p>,
     technologies: [
@@ -171,7 +174,7 @@ const data: projectData[] = [
         </>
       },
       { title: "Improvements Made", 
-        content: <><span>Please see <Link to="#">handover documentation</Link> for more information</span>
+        content: <>
         <ul>
           <li>Responsive Website</li>
           <li>Simplified Colour Palette</li>
@@ -183,18 +186,17 @@ const data: projectData[] = [
     links: [
       {accessor: "code", href: "https://github.com/TGH37/cro-business"},
       {accessor: "site", href: "https://convergence-cro-j26aaqvvd-tgh37.vercel.app/"},
+      {accessor: "wireframe", href: "https://xd.adobe.com/view/10731ff7-f901-4cb0-b6e9-7667dde56b40-4520/?fullscreen"},
     ],
   },
   { accessor: "div-data",
     title: "Dividend Data Website Rebuild",
     thumbnailImgs: {
-      wireframe: {src: DivDataThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for CRO-Convergence`},
-      thumbnail: {src: DivDataThumbnail, alt: `Thumbnail picture for the website build for CRO-Convergence`},
+      wireframe: {src: DivDataThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the dividend data website clone project`},
+      thumbnail: {src: DivDataThumbnail, alt: `Thumbnail picture for the dividend data website clone project`},
     },
     deviceImgs: [
-      {accessor: "desktop", src: crocDesktop},
-      {accessor: "tablet", src: crocTablet},
-      {accessor: "mobile", src: crocMobile},
+      {accessor: "desktop", src: divDataDesktop},
     ],
     cardContent: <p>A rebuild of <a href="https://www.dividenddata.co.uk" target="_blank">www.dividenddata.co.uk</a>, built with MERN stack technologies and Next.js. Features a custom charting library that I built using HTML Canvas API and Object Orientated Programming (OOP) in vanilla Javascript. A static website built with Next.js as a place for prospective customers for a freelancing business I am involved in.</p>,
     technologies: [
@@ -227,7 +229,7 @@ const data: projectData[] = [
         </>
       },
       { title: "Quick-Look Features", 
-        content: <><span>Please see <Link to="#">handover documentation</Link> for more information</span>
+        content: <>
         <ul>
           <li>Responsive Website</li>
           <li>Extensive Work with HTML5 Canvas API</li>
@@ -246,15 +248,15 @@ const data: projectData[] = [
   { accessor: "wtd",
     title: "Wingtip Digital",
     thumbnailImgs: {
-      wireframe: {src: WTDThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
-      thumbnail: {src: WTDThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
+      wireframe: {src: WTDThumbnail_Wireframe, alt: `Wireframe thumbnail picture for my freelancing website 'Wingtip Digital'`},
+      thumbnail: {src: WTDThumbnail, alt: `Thumbnail picture for my freelancing website 'Wingtip Digital'`},
     },
     deviceImgs: [
-      {accessor: "desktop", src: blogDesktop},
-      {accessor: "tablet", src: blogTablet},
-      {accessor: "mobile", src: blogMobile},
+      {accessor: "desktop", src: wtdDesktop },
+      {accessor: "tablet", src:  wtdTablet },
+      {accessor: "mobile", src:  wtdMobile },
     ],
-    cardContent: <p>A blogging website running on a Wordpress CMS and a front-end created with React, connected via the Wordpress REST API. Features a custom bundling solution, unit testing and optimisation.</p>,
+    cardContent: <p>A Wordpress website hosted and configured with Siteground. Features pages created with a mix of the 'Elementor' page-builder and the vanilla WordPress block editor 'Gutenberg', with advanced customisation of elements using custom HTML blocks and CSS</p>,
     technologies: [
       "html",
       "css",
@@ -269,21 +271,18 @@ const data: projectData[] = [
     sections: [
       { title: "Description", 
         content: <>
-          <p>For this project, I created a fully responsive blogging website that connects content stored in a Wordpress CMS, with a front-end that runs on React, via the Wordpress REST API. The front-end code is bundled and transpiled using a combination of Webpack, Babel and Typescript.</p>
+          <p>Wingtip Digital is the name of my freelancing business, aimed at providing a wide range of digital services for clients, as well as providing useful content for people visiting the platform</p>
             
-            <p>To give any visitors a better user experience and reduce data transfer requirements, I performed optimisation enhancements, utilising session storage to cache data fetched from the server, and optimised front-end image assets. Furthermore, I created automated unit tests, to improve reliability for users.</p>
+          <p>The website is created using WordPress and is hosted with Siteground. The design is widely implemented using Elementor, a page-building plugin, with advanced customisations being implemented using custom HTML blocks and CSS styling.</p>
 
-          <p>I undertook this process to better understand the Wordpress CMS, for use in my freelancing business, as well as push my web development knowledge by implementing my custom bundling solution. The blog is not currently being used; however I do intend to make a public blog in the future. </p>
+          <p>The freelancing work that I have secured so far has largely been working with the Hubspot platform to create landing pages for advertising campaigns, and providing technical support for clients.</p>
         </>
       },
       { title: "Quick-Look Features", 
         content: <>
         <ul>
-          <li>Wordpress CMS, Integrated Using Wordpress REST API</li>
+          <li>Wordpress CMS</li>
           <li>Responsive Website</li>
-          <li>Data Caching with Session Storage</li>
-          <li>Image Optimisation</li>
-          <li>Unit Testing With Jest</li>
         </ul>
       </>
       },
@@ -296,15 +295,15 @@ const data: projectData[] = [
   { accessor: "equine",
     title: "Equine Eventing Example Website",
     thumbnailImgs: {
-      wireframe: {src: EquineThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
-      thumbnail: {src: EquineThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
+      wireframe: {src: EquineThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the 'Equine Eventing Services' wordpress project`},
+      thumbnail: {src: EquineThumbnail, alt: `Thumbnail picture for the 'Equine Eventing Services' wordpress project`},
     },
     deviceImgs: [
-      {accessor: "desktop", src: blogDesktop},
-      {accessor: "tablet", src: blogTablet},
-      {accessor: "mobile", src: blogMobile},
+      {accessor: "desktop", src: equineDesktop},
+      {accessor: "tablet", src:  equineTablet },
+      {accessor: "mobile", src:  equineMobile },
     ],
-    cardContent: <p>A blogging website running on a Wordpress CMS and a front-end created with React, connected via the Wordpress REST API. Features a custom bundling solution, unit testing and optimisation.</p>,
+    cardContent: <p>A WordPress website created using Elementor and Gutenberg block editors, featuring custom blocks, created with HTML, PHP and Javascript for dynamic content</p>,
     technologies: [
       "html",
       "css",
@@ -320,77 +319,77 @@ const data: projectData[] = [
     sections: [
       { title: "Description", 
         content: <>
-          <p>For this project, I created a fully responsive blogging website that connects content stored in a Wordpress CMS, with a front-end that runs on React, via the Wordpress REST API. The front-end code is bundled and transpiled using a combination of Webpack, Babel and Typescript.</p>
+          <p>Equine Eventing Services is a website created with WordPress and hosted with Siteground, for a showjump training company. The design of the website is implemented using a combination of 'Elementor' and 'Gutenberg' block builders, with advanced customisation implemented with custom HTML and CSS</p>
             
-            <p>To give any visitors a better user experience and reduce data transfer requirements, I performed optimisation enhancements, utilising session storage to cache data fetched from the server, and optimised front-end image assets. Furthermore, I created automated unit tests, to improve reliability for users.</p>
+            <p>I created custom blocks using HTML, PHP and Javascript, for dynamic elements to the site. Thes blocks pull attribute information from custom 'Horse' posts that are created by the user and are displayed throughout the site</p>
 
-          <p>I undertook this process to better understand the Wordpress CMS, for use in my freelancing business, as well as push my web development knowledge by implementing my custom bundling solution. The blog is not currently being used; however I do intend to make a public blog in the future. </p>
+          <p>I designed the website and assets from scratch using design tools such as AdobeXD, Inkscape and GNU Image Manipulation Processor &#40;GIMP&#41;, before committing to fully develop the site so I could trial quick design changes without having to invest more time and effort than was necessary.</p>
         </>
       },
       { title: "Quick-Look Features", 
         content: <>
         <ul>
-          <li>Wordpress CMS, Integrated Using Wordpress REST API</li>
+          <li>Custom Blocks</li>
           <li>Responsive Website</li>
-          <li>Data Caching with Session Storage</li>
-          <li>Image Optimisation</li>
-          <li>Unit Testing With Jest</li>
+          <li>Advanced CSS Styling</li>
+          <li>Design Wireframes / Prototypes</li>
         </ul>
       </>
       },
     ],
     links: [
       {accessor: "site", href: "https://equineeventing.wingtipdigital.com/"},
-      {accessor: "designs", href: ""},
+      {accessor: "prototype", href: "https://xd.adobe.com/view/0e9ed0c5-d56f-4ed7-b828-4af4406944d9-5bcd/?fullscreen"},
+      // {accessor: "wireframe", href: ""},
     ],
     colorStops: ["white"]
   },
-  { accessor: "ipTracker",
-    title: "IP Address Tracker",
-    thumbnailImgs: {
-      wireframe: {src: IPTrackerThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
-      thumbnail: {src: IPTrackerThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
-    },
-    deviceImgs: [
-      {accessor: "desktop", src: ipTrackerDesktop},
-      {accessor: "tablet", src: ipTrackerTablet},
-      {accessor: "mobile", src: ipTrackerMobile},
-    ],
-    cardContent: <p>[InsertContent]</p>,
-    technologies: [
-      "html",
-      "css",
-      "javascript",
-      "github",
-    ],
-    sections: [
-      { title: "Description", 
-        content: <>
-          <p>For this project, I created a fully responsive blogging website that connects content stored in a Wordpress CMS, with a front-end that runs on React, via the Wordpress REST API. The front-end code is bundled and transpiled using a combination of Webpack, Babel and Typescript.</p>
+  // { accessor: "ipTracker",
+  //   title: "IP Address Tracker",
+  //   thumbnailImgs: {
+  //     wireframe: {src: IPTrackerThumbnail_Wireframe, alt: `Wireframe thumbnail picture for the website build for a lifestyle blog, connected to a Wordpress CMS`},
+  //     thumbnail: {src: IPTrackerThumbnail, alt: `Thumbnail picture for the Freecycle Remaster project, showing the original design of the website`},
+  //   },
+  //   deviceImgs: [
+  //     {accessor: "desktop", src: ipTrackerDesktop},
+  //     {accessor: "tablet", src: ipTrackerTablet},
+  //     {accessor: "mobile", src: ipTrackerMobile},
+  //   ],
+  //   cardContent: <p>[InsertContent]</p>,
+  //   technologies: [
+  //     "html",
+  //     "css",
+  //     "javascript",
+  //     "github",
+  //   ],
+  //   sections: [
+  //     { title: "Description", 
+  //       content: <>
+  //         <p>For this project, I created a fully responsive blogging website that connects content stored in a Wordpress CMS, with a front-end that runs on React, via the Wordpress REST API. The front-end code is bundled and transpiled using a combination of Webpack, Babel and Typescript.</p>
             
-            <p>To give any visitors a better user experience and reduce data transfer requirements, I performed optimisation enhancements, utilising session storage to cache data fetched from the server, and optimised front-end image assets. Furthermore, I created automated unit tests, to improve reliability for users.</p>
+  //           <p>To give any visitors a better user experience and reduce data transfer requirements, I performed optimisation enhancements, utilising session storage to cache data fetched from the server, and optimised front-end image assets. Furthermore, I created automated unit tests, to improve reliability for users.</p>
 
-          <p>I undertook this process to better understand the Wordpress CMS, for use in my freelancing business, as well as push my web development knowledge by implementing my custom bundling solution. The blog is not currently being used; however I do intend to make a public blog in the future. </p>
-        </>
-      },
-      { title: "Quick-Look Features", 
-        content: <>
-        <ul>
-          <li>Wordpress CMS, Integrated Using Wordpress REST API</li>
-          <li>Responsive Website</li>
-          <li>Data Caching with Session Storage</li>
-          <li>Image Optimisation</li>
-          <li>Unit Testing With Jest</li>
-        </ul>
-      </>
-      },
-    ],
-    links: [
-      {accessor: "code", href: "https://github.com/TGH37/ip-tracker"},
-      {accessor: "site", href: "https://ip-tracker-livid.vercel.app/"},
-    ],
-    colorStops: ["white"]
-  },
+  //         <p>I undertook this process to better understand the Wordpress CMS, for use in my freelancing business, as well as push my web development knowledge by implementing my custom bundling solution. The blog is not currently being used; however I do intend to make a public blog in the future. </p>
+  //       </>
+  //     },
+  //     { title: "Quick-Look Features", 
+  //       content: <>
+  //       <ul>
+  //         <li>Wordpress CMS, Integrated Using Wordpress REST API</li>
+  //         <li>Responsive Website</li>
+  //         <li>Data Caching with Session Storage</li>
+  //         <li>Image Optimisation</li>
+  //         <li>Unit Testing With Jest</li>
+  //       </ul>
+  //     </>
+  //     },
+  //   ],
+  //   links: [
+  //     {accessor: "code", href: "https://github.com/TGH37/ip-tracker"},
+  //     {accessor: "site", href: "https://ip-tracker-livid.vercel.app/"},
+  //   ],
+  //   colorStops: ["white"]
+  // },
 ];
 
 
