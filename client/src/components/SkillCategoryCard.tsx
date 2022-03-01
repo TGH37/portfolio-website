@@ -54,7 +54,6 @@ function SkillCategoryCard(props: Props) {
         const borderArry = borderMap.get(cardPosition);
         const borderKeys = borderArry.map(border => `border${border}`);
         const styleObj = borderKeys.reduce((tot, curr)=> (tot[curr]=borderSettings, tot), {borderRadius: 0});
-        console.log(styleObj)
         return styleObj;
     };
 

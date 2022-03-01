@@ -66,16 +66,12 @@ function Carousel(props: Props) {
         const endIdx = arrayIn.length - 1;
         let slicedArry = [];
         if(valueIdx + min < max) {
-
-            console.log("low: "+valueIdx);
             slicedArry = arrayIn.slice(0, min + valueIdx);
         }
         else if(valueIdx > endIdx - min + 1) {
-            console.log("high: "+valueIdx);
             slicedArry = arrayIn.slice(valueIdx - min + 1, endIdx+1);
         }
         else {
-            console.log("middle: "+valueIdx);
             slicedArry = arrayIn.slice(valueIdx - Math.floor(max / 2), valueIdx - Math.floor(max / 2) + max);
         };
         const returnArry = slicedArry.map(obj => arrayIn.indexOf(obj))
@@ -113,7 +109,6 @@ function Carousel(props: Props) {
         })
     }, [cardWidth, revealedIdxs]);
 
-    const [motionDirection, setMotionDirection] = useState<'increment' | 'decrement'>('increment')
     const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
     const clampMin = (num: number, min: number) => Math.max(num, min);
     const clampMax = (num: number, max: number) => Math.min(num, max);
@@ -130,10 +125,6 @@ function Carousel(props: Props) {
         else if(config === 'decrement') decrementWithClamp();
     }
 
-    useEffect(() => {
-        console.log(revealedIdxs)
-    }, [revealedIdxs])
-
     const bind = useDrag(({ args: idx, down, movement: [mx, my], initial: [x0] }) => {
         if(down) console.log(`down: ${down}, ${x0 + mx}`)
         api.start({ transform: `translate(${down ? x0 + mx : 0}, 0` })
@@ -142,7 +133,7 @@ function Carousel(props: Props) {
     const springEls = useMemo(() => {
         return springs.map((styles, idx) => {
             return (
-                <animated.div style={{...styles, position: 'absolute', width: cardWidth, maxWidth: 500}} /*{...bind(idx)}*/ >
+                <animated.div key={idx} style={{...styles, position: 'absolute', width: cardWidth, maxWidth: 500}} /*{...bind(idx)}*/ >
                     <div style={{position: 'relative'}}>
                         {projectCards[idx]}
                     </div>

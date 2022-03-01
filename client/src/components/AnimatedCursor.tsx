@@ -221,7 +221,6 @@ function AnimatedCursor(props: Props) {
             satLeft.start({to: satElOriginCoords.left});
             satTop.start({to: satElOriginCoords.top});
             api.start(idx => set_targetCoords(idx, targetWidth));
-            console.log(`cursor: ${boxPosX}, satEl: ${satElOriginCoords.left}`)
         }, [clientX, clientY])
 
 

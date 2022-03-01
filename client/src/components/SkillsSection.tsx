@@ -165,6 +165,7 @@ import { animated, useSprings } from 'react-spring';
     const skillCards = useMemo<JSX.Element[]>(() => {
         return skillsObj.map(({iconObj, title, skillsList, isActive, wasActive}) => (
             <SkillCardRotating 
+                key={title}
                 skillSectionClickHandler={skillSectionClickHandler}
                 icon={iconObj} 
                 title={title} 
@@ -269,7 +270,7 @@ import { animated, useSprings } from 'react-spring';
                 <div className={styles.skillCardsContainer} ref={containerRef}>
                     {   
                         springs.map((springStyles, idx) => (
-                            <animated.div style={{...springStyles, position: 'absolute'}}>
+                            <animated.div key={idx} style={{...springStyles, position: 'absolute'}}>
                                 {skillCards[idx]}
                             </animated.div>
                         ))
