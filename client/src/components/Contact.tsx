@@ -2,7 +2,8 @@ import React, { CSSProperties, useState } from 'react';
 import styles from '../styles/css/contact.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-// const emailjs = require('emailjs-com');
+import emailjs from 'emailjs-com';
+
 
 interface Props {}
 
@@ -11,19 +12,20 @@ function Contact(props: Props) {
     const [wasSubmitSuccessful, setWasSubmitSuccessful] = useState<boolean>(false);
     const [wasFormSubmitted, setWasFormSubmitted] = useState<boolean>(false);
     const contactNumber = "+447514632300";
-//   function sendEmail(e) {
-//     e.preventDefault();
 
-//     emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID, e.target, process.env.NEXT_PUBLIC_USER_ID)
-//       .then((result) => {
-//           console.log(result.text);
-//           setWasSubmitSuccessful(true);
-//       }, (error) => {
-//           console.log(error.text);
-//           setWasSubmitSuccessful(false);
-//       })
-//       .then(() => setWasFormSubmitted(true));
-//   }
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
+      .then((result) => {
+          console.log(result.text);
+          setWasSubmitSuccessful(true);
+      }, (error) => {
+          console.log(error.text);
+          setWasSubmitSuccessful(false);
+      })
+      .then(() => setWasFormSubmitted(true));
+  }
 
   const inlineSubmitMsgStyle: CSSProperties = {
     visibility: wasFormSubmitted ? "visible" : "hidden",
@@ -32,8 +34,8 @@ function Contact(props: Props) {
   };
 
   const inlineSubmitMsg = wasSubmitSuccessful ? 
-  "Thank you for submitting your enquiry, we will reply as soon as we are able" :
-  "Unfortunately something went wrong when submitting your enquiry, please try again or call us directly on " + contactNumber;
+  "Thank you for submitting your enquiry, I will reply as soon as I am able to" :
+  "Unfortunately something went wrong when submitting your enquiry, please try again or call me directly on " + contactNumber;
 
     return (
         <section id="contact">
@@ -46,7 +48,7 @@ function Contact(props: Props) {
                     <div className={styles.contactLine}><FontAwesomeIcon icon={faPhone} style={{color: "lightgreen"}}/><span>&nbsp;&nbsp;{contactNumber}</span></div>
                     <div className={styles.contactLine}><FontAwesomeIcon icon={faEnvelope} style={{color: "beige"}}/><span>&nbsp;&nbsp;{"t.hayton37@gmail.com"}</span></div>
                 </div>
-                <form action="submit" className={styles.contactForm}>
+                <form action="submit" className={styles.contactForm} onSubmit={sendEmail} id="contact-form">
                     <div>
                         <label htmlFor="" className={styles.requiredFormField}>Name </label>
                         <input type="text" name="name_field" placeholder="Please Enter Your Name" required/>
