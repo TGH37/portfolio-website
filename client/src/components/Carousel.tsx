@@ -6,6 +6,7 @@ import { animated, config, useSprings, } from 'react-spring';
 import { GlobalCtx } from '../contexts/GlobalCtx';
 import useBreakpoint from '../hooks/useBreakpoint';
 import { useDrag } from '@use-gesture/react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 interface Props {};
@@ -22,7 +23,7 @@ function Carousel(props: Props) {
         const element = containerRef.current as Element;
         const elementRect = element.getBoundingClientRect();
         setContainerDims(elementRect);
-        setCardWidth(elementRect.width / (isMobileMode ? 1.25 : 3));
+        setCardWidth((elementRect.width - revealedIdxs.length * gapX_px) / (isMobileMode ? 1.25 : 3));
     };
     
     useEffect(() => {
@@ -159,8 +160,8 @@ function Carousel(props: Props) {
                 {springEls}
             </div>
             <div className={`${styles.carouselBtnContainer} `}>
-                <button onClick={() => clickHandler('decrement')} style={{backgroundColor: selectedProjectIdx === 0 ? "blue" : "lightgrey"}}>&#60;</button>
-                <button onClick={() => clickHandler('increment')} style={{backgroundColor: selectedProjectIdx === ProjectData.length -1 ? "blue" : "lightgrey"}}>&#62;</button>
+                <button onClick={() => clickHandler('decrement')} style={{display: selectedProjectIdx === 0 ? "none" : "initial"}}><FontAwesomeIcon icon={["fas", "chevron-left"]} size="2x"/></button>
+                <button onClick={() => clickHandler('increment')} style={{display: selectedProjectIdx === ProjectData.length -1 ? "none" : "initial"}}><FontAwesomeIcon icon={["fas", "chevron-right"]} size="2x"/></button>
             </div>
         </>
     )

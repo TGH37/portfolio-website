@@ -453,13 +453,25 @@
 
 .carouselBtnContainer {
   display: flex;
-  max-width: 100px;
+  width: 200px;
+  height: 35px;
   margin: auto;
-  color: white;
 }
 
 .carouselBtnContainer button {
-  background-color: lightgrey;
+  transition: background-color 0.5s, color 0.5s;
+  color: white;
+  background-color: #cecece;
   flex-basis: 100%;
   margin: 0 .5rem;
+  border: none;
+  font-weight: bold;
+  user-select: none;
+  border-radius: 5;
+}
+
+.carouselBtnContainer button:hover {
+  cursor: pointer;
+  background-color: #78c0ff;
+  color: #141414;
 }

@@ -30,7 +30,7 @@ function ProjectDevicePreview(props: Props) {
   return (
     <div className={styles.projectPreviewContainer}>
       {isLoading ? <p>Loading...</p> : <></>}
-      <DeviceIcons selectedDeviceAccessor={selectedDeviceAccessor} updateSelectedDevice={updateSelectedDevice}/>
+      <DeviceIcons selectedDeviceAccessor={selectedDeviceAccessor} updateSelectedDevice={updateSelectedDevice} imgArry={deviceImgs}/>
       <div className={styles.projectPreviewImgContainer}>
         {getDeviceImage()}
       </div>

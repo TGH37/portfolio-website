@@ -24,7 +24,7 @@ interface projectData {
   title: string
   imgs?: any[]
   thumbnailImgs: {wireframe: {src: string, alt: string}, thumbnail: {src: string, alt: string}}
-  deviceImgs: Array<{accessor: deviceIcon, src: any}>
+  deviceImgs: Array<{accessor: Device, src: any}>
   cardContent: JSX.Element
   technologies: technologies[],
   sections: Array<{title: string, content: JSX.Element}>
