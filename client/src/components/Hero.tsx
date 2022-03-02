@@ -81,7 +81,7 @@ function HomeTitle() {
             <h1>Tom Hayton</h1>
           </div>
           <div id="title-profession-full-stack" className={`${styles.heroTitleLine} ${styles.titleProfessionFullStack}`} style={style.titleProfession}>
-            <h2>Full Stack Developer</h2>
+            <h2>Web Developer</h2>
           </div>
         </>
       : 

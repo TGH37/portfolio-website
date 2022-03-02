@@ -283,15 +283,16 @@
   grid-template-columns: 100%;
   justify-items: center;
   padding: 1rem 0;
-  min-height: 150px;
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  aspect-ratio: 16 / 9;
   position: relative;
   justify-self: center;
 }
 
 @media (min-width: 1024px) {
   .projectPreviewImgContainer {
-    min-height: 250px;
+    width: 100%;
   }
 }
 

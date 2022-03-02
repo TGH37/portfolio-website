@@ -13,10 +13,14 @@ function Contact(props: Props) {
     const [wasFormSubmitted, setWasFormSubmitted] = useState<boolean>(false);
     const contactNumber = "+447514632300";
 
+    const emailJsServiceID = "service_3but2tv";
+    const emailJsEmailTemplateID = "portfolio";
+    const emailJsUserID = "user_BRUq8XubzlIS57ISQ0tZ7";
+
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
+    emailjs.sendForm(emailJsServiceID, emailJsEmailTemplateID, e.target, emailJsUserID)
       .then((result) => {
           console.log(result.text);
           setWasSubmitSuccessful(true);
@@ -62,8 +66,11 @@ function Contact(props: Props) {
                         <input type="email" name="email_field" placeholder="e.g. email@address.com" required/>
                     </div>
                     <textarea name="message_field" id="message" rows={10} placeholder="Send me a message..." ></textarea>
-                    <button className={`${styles.formSubmitBtn} ${styles.buttonSuccess}`}>Submit</button>
-                    <div className={styles.confirmationLine} style={inlineSubmitMsgStyle}>{inlineSubmitMsg}</div>
+                    <div className={styles.formSubmitContainer}>
+                        <div className="g-recaptcha" data-sitekey="6Lder6weAAAAAIygBMXL1W_zIWw2aGpwaH_7FQZQ"></div>
+                        <button className={`${styles.formSubmitBtn} ${styles.buttonSuccess}`}>Submit</button>
+                        <div className={styles.confirmationLine} style={inlineSubmitMsgStyle}>{inlineSubmitMsg}</div>
+                    </div>
                 </form>
             </div>
          </section>
